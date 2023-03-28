@@ -58,21 +58,42 @@ export default createUnplugin<Options>(options => ({
   webpack: async (compiler) => {
     const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
 
+    const injectTo =
+          options.injectTo && options.injectTo !== 'custom'
+            ? options.injectTo
+            : 'head-prepend'
+
     compiler.hooks.compilation.tap('unplugin-inject-preload', (compilation) => {
       const hooks = HTMLWebpackPlugin.getHooks(compilation);
+      const assets = new Set(Object.keys(compilation.assets));
+      compilation.chunks.forEach(chunk => {
+        chunk.files.forEach((file: string) => assets.add(file));
+      });
 
       hooks.alterAssetTagGroups.tapAsync(
         'unplugin-inject-preload',
         (data, cb) => {
-          const assets = new Set(Object.keys(compilation.assets));
-          compilation.chunks.forEach(chunk => {
-            chunk.files.forEach((file: string) => assets.add(file));
-          });
 
           const tags = data.headTags
           const tagsAttributes = getTagsAttributes(assets, options, data.publicPath)
 
-          data.headTags = tags
+          tagsAttributes.forEach(attributes => {
+            tags.push({
+              tagName: 'link',
+              attributes,
+              voidTag: true,
+              meta: {
+                plugin: 'unplugin-inject-preload',
+              },
+            })
+          })
+
+          if (injectTo === 'head-prepend') {
+            data.headTags = tags.concat(data.headTags)
+          } else {
+            data.headTags = data.headTags.concat(tags)
+          }
+
           cb(null, data)
         }
       )

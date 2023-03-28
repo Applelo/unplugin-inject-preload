@@ -47,6 +47,9 @@ Example: [`playground/vitejs`](./playground/vitejs)
 module.exports = {
 }
 ```
+
+Example: [`playground/webpack`](./playground/webpack)
+
 <br></details>
 
 ## 👨‍💻 Usage
