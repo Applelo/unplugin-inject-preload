@@ -1,24 +1,29 @@
 {
-  "name": "unplugin-starter",
+  "name": "unplugin-inject-preload",
   "type": "module",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@7.1.1",
-  "description": "Register global imports on demand for Vite and Webpack",
+  "description": "Inject <link rel='preload'> for Webpack/ViteJS",
   "license": "MIT",
-  "homepage": "https://github.com/antfu/unplugin-starter#readme",
+  "engines": {
+    "node": ">=16"
+  },
+  "homepage": "https://github.com/applelo/unplugin-inject-preload#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/unplugin-starter.git"
+    "url": "git+https://github.com/applelo/unplugin-inject-preload.git"
   },
   "bugs": {
-    "url": "https://github.com/antfu/unplugin-starter/issues"
+    "url": "https://github.com/applelo/unplugin-inject-preload/issues"
   },
   "keywords": [
     "unplugin",
     "vite",
     "webpack",
-    "rollup",
-    "transform"
+    "html",
+    "link",
+    "preload",
+    "inject"
   ],
   "exports": {
     ".": {
@@ -35,21 +40,6 @@
       "types": "./dist/webpack.d.ts",
       "require": "./dist/webpack.cjs",
       "import": "./dist/webpack.js"
-    },
-    "./rollup": {
-      "types": "./dist/rollup.d.ts",
-      "require": "./dist/rollup.cjs",
-      "import": "./dist/rollup.js"
-    },
-    "./esbuild": {
-      "types": "./dist/esbuild.d.ts",
-      "require": "./dist/esbuild.cjs",
-      "import": "./dist/esbuild.js"
-    },
-    "./nuxt": {
-      "types": "./dist/nuxt.d.ts",
-      "require": "./dist/nuxt.cjs",
-      "import": "./dist/nuxt.js"
     },
     "./types": {
       "types": "./dist/types.d.ts",
@@ -79,28 +69,32 @@
     "lint": "eslint .",
     "play": "npm -C playground run dev",
     "prepublishOnly": "npm run build",
-    "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest"
   },
+  "peerDependencies": {
+    "html-webpack-plugin": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "html-webpack-plugin": {
+      "optional": true
+    }
+  },
   "dependencies": {
-    "unplugin": "^1.0.1"
+    "mime-types": "^2.1.35",
+    "unplugin": "^1.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.33.1",
-    "@types/node": "^18.11.13",
-    "bumpp": "^8.2.1",
-    "chalk": "^5.2.0",
-    "eslint": "^8.29.0",
-    "esno": "^0.16.3",
+    "@antfu/eslint-config": "^0.36.0",
+    "@types/mime-types": "^2.1.1",
+    "@types/node": "^18.15.3",
     "fast-glob": "^3.2.12",
-    "nodemon": "^2.0.20",
-    "rimraf": "^3.0.2",
-    "rollup": "^3.7.3",
-    "tsup": "^6.5.0",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.0",
-    "vitest": "^0.25.7",
-    "webpack": "^5.75.0"
+    "html-webpack-plugin": "^5.5.0",
+    "tsup": "^6.6.3",
+    "tsx": "^3.12.5",
+    "typescript": "^4.9.5",
+    "vite": "^4.2.0",
+    "vitest": "^0.29.3",
+    "webpack": "^5.76.2"
   }
 }

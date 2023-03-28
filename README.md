@@ -1,28 +1,24 @@
-# unplugin-starter
+# unplugin-inject-preload
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-starter)
+[![NPM version](https://img.shields.io/npm/v/unplugin-inject-preload?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-inject-preload)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
+This plugin adds preload links.
 
-## Template Usage
-
-To use this template, clone it down using:
-
-```bash
-npx degit antfu/unplugin-starter my-unplugin
-```
-
-And do a global replace of `unplugin-starter` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+Supporting:
+- Vite 3 and 4 (on build only)
+- Webpack 5 (with HTMLWebpackPlugin 5)
+<!-- - Rspack -->
+<!-- - Nuxt 3 -->
 
 ## Install
 
 ```bash
-npm i unplugin-starter
+#npm
+npm i -D unplugin-inject-preload
+#yarn
+yarn add -D unplugin-inject-preload
+#pnpm
+pnpm i -D unplugin-inject-preload
 ```
 
 <details>
@@ -30,94 +26,111 @@ npm i unplugin-starter
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-starter/vite'
+import UnpluginInjectPreload from '../../src/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    UnpluginInjectPreload({ /* options */ }),
   ],
 })
 ```
 
-Example: [`playground/`](./playground/)
+Example: [`playground/vitejs`](./playground/vitejs)
 
 <br></details>
 
 <details>
-<summary>Rollup</summary><br>
-
-```ts
-// rollup.config.js
-import Starter from 'unplugin-starter/rollup'
-
-export default {
-  plugins: [
-    Starter({ /* options */ }),
-  ],
-}
-```
-
-<br></details>
-
-
-<details>
-<summary>Webpack</summary><br>
+<summary>Webpack 5 (with HTMLWebpackPlugin 5)</summary><br>
 
 ```ts
 // webpack.config.js
 module.exports = {
-  /* ... */
+}
+```
+<br></details>
+
+## 👨‍💻 Usage
+
+All the files needs to be process by the bundler to be find by the plugin. For example, if I load this CSS file :
+
+```css
+@font-face {
+  font-family: 'Roboto';
+  src: url('./../fonts/Roboto-Italic.woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./../fonts/Roboto-Regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+```
+
+I can make the following configuration for UnpluginInjectPreload :
+
+```js
+// vite.config.js / vite.config.ts
+import UnpluginInjectPreload from 'unplugin-inject-preload'
+
+export default {
   plugins: [
-    require('unplugin-starter/webpack')({ /* options */ })
+    UnpluginInjectPreload({
+      files: [
+        {
+          match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/
+        },
+        {
+          match: /lazy.[a-z-0-9]*.(css|js)$/,
+        }
+      ]
+    })
   ]
 }
 ```
 
-<br></details>
+### Options
 
-<details>
-<summary>Nuxt</summary><br>
+* files: An array of files object
+  * match: A regular expression to target build files you want to preload
+  * attributes (optional):
+  If this option is ommited, it will determine the `mime` and the `as` attributes automatically.
+  You can also add/override any attributes you want.
+* injectTo (optional): By default, the preload links are injected with the `'head-prepend'` options. But you can pass `'head'` to inject preload links at bottom of the head tag if you need it.<br> Since 1.1, you can pass the `'custom'` option and put `<!--__unplugin-inject-preload__-->` in your `.html` file where you want to inject the preload links.
 
-```ts
-// nuxt.config.js
+With the full options usage, you can do something like this :
+
+```js
+// vite.config.js / vite.config.ts
+import UnpluginInjectPreload from 'unplugin-inject-preload'
+
 export default {
-  buildModules: [
-    ['unplugin-starter/nuxt', { /* options */ }],
-  ],
+  plugins: [
+    UnpluginInjectPreload({
+      files: [
+        {
+          match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+          attributes: {
+            type: 'font/woff2',
+            as: 'font',
+            crossorigin: 'anonymous',
+            'data-font': 'Roboto'
+          }
+        },
+        {
+          rel: 'modulepreload',
+          type: undefined,
+          match: /lazy.[a-z-0-9]*.(js)$/,
+        }
+      ],
+      injectTo: 'head-prepend'
+    })
+  ]
 }
 ```
 
-> This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
+## 👨‍💼 Licence
 
-<br></details>
-
-<details>
-<summary>Vue CLI</summary><br>
-
-```ts
-// vue.config.js
-module.exports = {
-  configureWebpack: {
-    plugins: [
-      require('unplugin-starter/webpack')({ /* options */ }),
-    ],
-  },
-}
-```
-
-<br></details>
-
-<details>
-<summary>esbuild</summary><br>
-
-```ts
-// esbuild.config.js
-import { build } from 'esbuild'
-import Starter from 'unplugin-starter/esbuild'
-
-build({
-  plugins: [Starter()],
-})
-```
-
-<br></details>
+MIT
