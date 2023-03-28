@@ -98,7 +98,7 @@ export default {
   * attributes (optional):
   If this option is ommited, it will determine the `mime` and the `as` attributes automatically.
   You can also add/override any attributes you want.
-* injectTo (optional): By default, the preload links are injected with the `'head-prepend'` options. But you can pass `'head'` to inject preload links at bottom of the head tag if you need it.<br> Since 1.1, you can pass the `'custom'` option and put `<!--__unplugin-inject-preload__-->` in your `.html` file where you want to inject the preload links.
+* injectTo (optional): By default, the preload links are injected with the `'head-prepend'` options. But you can pass `'head'` to inject preload links at bottom of the head tag if you need it.<br> You can pass the `'custom'` option and put `<!--__unplugin-inject-preload__-->` in your `.html` file where you want to inject the preload links.
 
 With the full options usage, you can do something like this :
 
