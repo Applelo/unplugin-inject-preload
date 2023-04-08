@@ -116,9 +116,9 @@ export default {
         {
           match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
           attributes: {
-            type: 'font/woff2',
-            as: 'font',
-            crossorigin: 'anonymous',
+            'type': 'font/woff2',
+            'as': 'font',
+            'crossorigin': 'anonymous',
             'data-font': 'Roboto'
           }
         },

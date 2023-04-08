@@ -6,7 +6,7 @@ import { getTagsAttributes } from './helper/getTagsAttributes'
 import { serializeTags } from './helper/serializer'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
-let viteBasePath:string
+let viteBasePath: string
 
 export default createUnplugin<Options>(options => ({
   name: 'unplugin-inject-preload',
@@ -25,8 +25,8 @@ export default createUnplugin<Options>(options => ({
         if (!bundle)
           return html
 
-        const injectTo =
-          options.injectTo && options.injectTo !== 'custom'
+        const injectTo
+          = (options.injectTo && options.injectTo !== 'custom')
             ? options.injectTo
             : 'head-prepend'
 
@@ -36,20 +36,21 @@ export default createUnplugin<Options>(options => ({
         const tags: HtmlTagDescriptor[] = []
         const tagsAttributes = getTagsAttributes(assets, options, viteBasePath)
 
-        tagsAttributes.forEach(attrs => {
+        tagsAttributes.forEach((attrs) => {
           tags.push({
             tag: 'link',
             attrs,
-            injectTo
+            injectTo,
           })
         })
 
         if (options.injectTo === 'custom') {
           return html.replace(
             customInject,
-            (match, p1) => `\n${serializeTags(tags, p1)}`
+            (match, p1) => `\n${serializeTags(tags, p1)}`,
           )
-        } else {
+        }
+        else {
           return tags
         }
       },
@@ -58,26 +59,27 @@ export default createUnplugin<Options>(options => ({
   webpack: async (compiler) => {
     const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
 
-    const injectTo =
-          options.injectTo && options.injectTo !== 'custom'
+    const injectTo
+          = (options.injectTo && options.injectTo !== 'custom')
             ? options.injectTo
             : 'head-prepend'
 
     compiler.hooks.compilation.tap('unplugin-inject-preload', (compilation) => {
-      const hooks = HTMLWebpackPlugin.getHooks(compilation);
-      const assets = new Set(Object.keys(compilation.assets));
-      compilation.chunks.forEach(chunk => {
-        chunk.files.forEach((file: string) => assets.add(file));
-      });
+      const hooks = HTMLWebpackPlugin.getHooks(compilation)
+      const assets = new Set(Object.keys(compilation.assets))
+      compilation.chunks.forEach((chunk) => {
+        chunk.files.forEach((file: string) => assets.add(file))
+      })
+      // eslint-disable-next-line no-console
+      console.log(assets)
 
       hooks.alterAssetTagGroups.tapAsync(
         'unplugin-inject-preload',
         (data, cb) => {
-
           const tags = data.headTags
           const tagsAttributes = getTagsAttributes(assets, options, data.publicPath)
 
-          tagsAttributes.forEach(attributes => {
+          tagsAttributes.forEach((attributes) => {
             tags.push({
               tagName: 'link',
               attributes,
@@ -88,14 +90,14 @@ export default createUnplugin<Options>(options => ({
             })
           })
 
-          if (injectTo === 'head-prepend') {
+          if (injectTo === 'head-prepend')
             data.headTags = tags.concat(data.headTags)
-          } else {
+
+          else
             data.headTags = data.headTags.concat(tags)
-          }
 
           cb(null, data)
-        }
+        },
       )
     })
   },

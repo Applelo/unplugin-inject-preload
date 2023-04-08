@@ -2,12 +2,9 @@
   "name": "unplugin-inject-preload",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@7.1.1",
+  "packageManager": "pnpm@8.1.0",
   "description": "Inject <link rel='preload'> for Webpack/ViteJS",
   "license": "MIT",
-  "engines": {
-    "node": ">=16"
-  },
   "homepage": "https://github.com/applelo/unplugin-inject-preload#readme",
   "repository": {
     "type": "git",
@@ -62,11 +59,15 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch src",
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "play": "npm -C playground run dev",
     "prepublishOnly": "npm run build",
     "start": "esno src/index.ts",
@@ -87,14 +88,14 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
     "@types/mime-types": "^2.1.1",
-    "@types/node": "^18.15.3",
+    "@types/node": "^18.15.11",
     "fast-glob": "^3.2.12",
     "html-webpack-plugin": "^5.5.0",
-    "tsup": "^6.6.3",
-    "tsx": "^3.12.5",
+    "tsup": "^6.7.0",
+    "tsx": "^3.12.6",
     "typescript": "^4.9.5",
-    "vite": "^4.2.0",
-    "vitest": "^0.29.3",
-    "webpack": "^5.76.2"
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8",
+    "webpack": "^5.78.0"
   }
 }
