@@ -86,7 +86,7 @@ const configs: Record<string, Options> = {
   },
 }
 
-const buildVite = async (pluginConfig: Options, config: InlineConfig = {}) => {
+async function buildVite(pluginConfig: Options, config: InlineConfig = {}) {
   const { output } = (await build({
     root: resolve(__dirname, './fixtures/vitejs'),
     plugins: [UnpluginInjectPreload(pluginConfig)],

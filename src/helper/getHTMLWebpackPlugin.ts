@@ -1,4 +1,4 @@
-export const getHTMLWebpackPlugin = async () => {
+export async function getHTMLWebpackPlugin() {
   try {
     const HTMLWebpackPlugin = await import('html-webpack-plugin')
     return HTMLWebpackPlugin.default

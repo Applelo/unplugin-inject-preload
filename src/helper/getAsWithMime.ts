@@ -1,4 +1,4 @@
-export const getAsWithMime = (mime: string): RequestDestination | undefined => {
+export function getAsWithMime(mime: string): RequestDestination | undefined {
   let destination = mime.split('/')[0] as RequestDestination
   const validDestinations: RequestDestination[] = [
     'audio',

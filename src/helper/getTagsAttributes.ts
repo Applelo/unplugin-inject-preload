@@ -3,7 +3,7 @@ import { lookup as mimeLookup } from 'mime-types'
 import type { Options } from '../types'
 import { getAsWithMime } from './getAsWithMime'
 
-export const getTagsAttributes = (assetsSet: Set<string>, options: Options, basePath = '') => {
+export function getTagsAttributes(assetsSet: Set<string>, options: Options, basePath = '') {
   const tagsAttributes = []
   const assets = Array.from(assetsSet)
 
