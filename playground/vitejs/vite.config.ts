@@ -1,7 +1,8 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
+
 // import Inspect from 'vite-plugin-inspect'
-import UnpluginInjectPreload from './../../src/vite'
+import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
 
 export default defineConfig({
   build: {

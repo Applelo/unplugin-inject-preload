@@ -8,7 +8,6 @@ Supporting:
 - Vite 3 and 4 (on build only)
 - Webpack 5 (with HTMLWebpackPlugin 5)
 <!-- - Rspack -->
-<!-- - Nuxt 3 -->
 
 ## Install
 

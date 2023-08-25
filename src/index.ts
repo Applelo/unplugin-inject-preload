@@ -7,9 +7,10 @@ import { serializeTags } from './helper/serializer'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
 let viteBasePath: string
+const name = 'unplugin-inject-preload'
 
 export default createUnplugin<Options>(options => ({
-  name: 'unplugin-inject-preload',
+  name,
   vite: {
     apply: 'build',
     configResolved(config) {
@@ -56,26 +57,23 @@ export default createUnplugin<Options>(options => ({
       },
     },
   },
-  webpack: async (compiler) => {
-    const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
+  webpack: (compiler) => {
+    // const injectTo
+    // = (options.injectTo && options.injectTo !== 'custom')
+    //   ? options.injectTo
+    //   : 'head-prepend'
 
-    const injectTo
-          = (options.injectTo && options.injectTo !== 'custom')
-            ? options.injectTo
-            : 'head-prepend'
-
-    compiler.hooks.compilation.tap('unplugin-inject-preload', (compilation) => {
+    compiler.hooks.compilation.tap(name, async (compilation) => {
+      const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
       const hooks = HTMLWebpackPlugin.getHooks(compilation)
-      const assets = new Set(Object.keys(compilation.assets))
-      compilation.chunks.forEach((chunk) => {
-        chunk.files.forEach((file: string) => assets.add(file))
-      })
-      // eslint-disable-next-line no-console
-      console.log(assets)
 
       hooks.alterAssetTagGroups.tapAsync(
-        'unplugin-inject-preload',
+        name,
         (data, cb) => {
+          const assets = new Set(Object.keys(compilation.assets))
+          compilation.chunks.forEach((chunk) => {
+            chunk.files.forEach((file: string) => assets.add(file))
+          })
           const tags = data.headTags
           const tagsAttributes = getTagsAttributes(assets, options, data.publicPath)
 
@@ -85,16 +83,19 @@ export default createUnplugin<Options>(options => ({
               attributes,
               voidTag: true,
               meta: {
-                plugin: 'unplugin-inject-preload',
+                plugin: name,
               },
             })
           })
 
-          if (injectTo === 'head-prepend')
-            data.headTags = tags.concat(data.headTags)
+          // eslint-disable-next-line no-console
+          console.log(tags)
 
-          else
-            data.headTags = data.headTags.concat(tags)
+          // if (injectTo === 'head-prepend')
+          //   data.headTags = tags.concat(data.headTags)
+          // else
+          //   data.headTags = data.headTags.concat(tags)
+          data.headTags = tags
 
           cb(null, data)
         },

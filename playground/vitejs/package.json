@@ -1,14 +1,15 @@
 {
   "private": true,
-  "packageManager": "pnpm@8.1.0",
+  "packageManager": "pnpm@8.6.12",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^4.9.5",
-    "vite": "^4.2.1",
-    "vite-plugin-inspect": "^0.7.19"
+    "typescript": "^5.2.2",
+    "unplugin-inject-preload": "workspace:*",
+    "vite": "^4.4.9",
+    "vite-plugin-inspect": "^0.7.38"
   }
 }
