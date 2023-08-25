@@ -24,6 +24,9 @@ importers:
       '@types/node':
         specifier: ^20.5.6
         version: 20.5.6
+      esno:
+        specifier: ^0.17.0
+        version: 0.17.0
       fast-glob:
         specifier: ^3.3.1
         version: 3.3.1
@@ -2219,6 +2222,13 @@ packages:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /esno@0.17.0:
+    resolution: {integrity: sha512-w78cQGlptQfsBYfootUCitsKS+MD74uR5L6kNsvwVkJsfzEepIafbvWsx2xK4rcFP4IUftt4F6J8EhagUxX+Bg==}
+    hasBin: true
+    dependencies:
+      tsx: 3.12.7
     dev: true
 
   /espree@9.6.1:

@@ -1,3 +1,4 @@
+import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 import type { HtmlTagDescriptor, IndexHtmlTransformContext } from 'vite'
 import type { Options } from './types'
@@ -6,10 +7,10 @@ import { getTagsAttributes } from './helper/getTagsAttributes'
 import { serializeTags } from './helper/serializer'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
-const name = 'unplugin-inject-preload'
 let viteBasePath: string
+const name = 'unplugin-inject-preload'
 
-export default createUnplugin<Options>(options => ({
+export const unpluginFactory: UnpluginFactory<Options> = options => ({
   name,
   vite: {
     apply: 'build',
@@ -108,4 +109,8 @@ export default createUnplugin<Options>(options => ({
       }
     })
   },
-}))
+})
+
+export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+
+export default unplugin
