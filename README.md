@@ -39,11 +39,18 @@ Example: [`playground/vitejs`](./playground/vitejs)
 <br></details>
 
 <details>
-<summary>Webpack 5 (with HTMLWebpackPlugin 5)</summary><br>
+<summary>Webpack (with HTMLWebpackPlugin)</summary><br>
 
 ```ts
 // webpack.config.js
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
+
 module.exports = {
+  plugins: [
+    HtmlWebpackPlugin(),
+    UnpluginInjectPreload({ /* options */ }),
+  ]
 }
 ```
 
