@@ -6,8 +6,8 @@ import { getTagsAttributes } from './helper/getTagsAttributes'
 import { serializeTags } from './helper/serializer'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
-let viteBasePath: string
 const name = 'unplugin-inject-preload'
+let viteBasePath: string
 
 export default createUnplugin<Options>(options => ({
   name,
@@ -58,14 +58,10 @@ export default createUnplugin<Options>(options => ({
     },
   },
   webpack: (compiler) => {
-    // const injectTo
-    // = (options.injectTo && options.injectTo !== 'custom')
-    //   ? options.injectTo
-    //   : 'head-prepend'
-
     compiler.hooks.compilation.tap(name, async (compilation) => {
       const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
       const hooks = HTMLWebpackPlugin.getHooks(compilation)
+      let tags: any[] = []
 
       hooks.alterAssetTagGroups.tapAsync(
         name,
@@ -74,32 +70,42 @@ export default createUnplugin<Options>(options => ({
           compilation.chunks.forEach((chunk) => {
             chunk.files.forEach((file: string) => assets.add(file))
           })
-          const tags = data.headTags
-          const tagsAttributes = getTagsAttributes(assets, options, data.publicPath)
-
-          tagsAttributes.forEach((attributes) => {
-            tags.push({
-              tagName: 'link',
-              attributes,
-              voidTag: true,
-              meta: {
-                plugin: name,
-              },
-            })
-          })
-
-          // eslint-disable-next-line no-console
-          console.log(tags)
-
-          // if (injectTo === 'head-prepend')
-          //   data.headTags = tags.concat(data.headTags)
-          // else
-          //   data.headTags = data.headTags.concat(tags)
-          data.headTags = tags
-
+          tags = getTagsAttributes(assets, options, data.publicPath)
           cb(null, data)
         },
       )
+
+      if (options.injectTo === 'custom') {
+        hooks.beforeEmit.tapAsync(
+          name,
+          (data, cb) => {
+            data.html = data.html.replace(
+              customInject,
+              (match, p1) => `\n${serializeTags(tags, p1)}`,
+            )
+            cb(null, data)
+          },
+        )
+      }
+      else {
+        hooks.alterAssetTagGroups.tapAsync(
+          name,
+          (data, cb) => {
+            tags.forEach((attributes) => {
+              data.headTags[options.injectTo === 'head-prepend' ? 'unshift' : 'push']({
+                tagName: 'link',
+                attributes,
+                voidTag: true,
+                meta: {
+                  plugin: name,
+                },
+              })
+            })
+
+            cb(null, data)
+          },
+        )
+      }
     })
   },
 }))
