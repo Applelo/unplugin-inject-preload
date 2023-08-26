@@ -2,12 +2,14 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-inject-preload?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-inject-preload)
 
-This plugin adds preload links.
+This plugin adds preload links by getting output assets from the build tools your using.
 
 Supporting:
 - Vite 3 and 4 (on build only)
 - Webpack 5 (with HTMLWebpackPlugin 5)
 <!-- - Rspack -->
+
+> This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
 
 ## Install
 
@@ -82,7 +84,7 @@ I can make the following configuration for UnpluginInjectPreload :
 
 ```js
 // vite.config.js / vite.config.ts
-import UnpluginInjectPreload from 'unplugin-inject-preload'
+import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
 
 export default {
   plugins: [
@@ -113,7 +115,7 @@ With the full options usage, you can do something like this :
 
 ```js
 // vite.config.js / vite.config.ts
-import UnpluginInjectPreload from 'unplugin-inject-preload'
+import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
 
 export default {
   plugins: [
@@ -129,9 +131,11 @@ export default {
           }
         },
         {
-          rel: 'modulepreload',
-          type: undefined,
           match: /lazy.[a-z-0-9]*.(js)$/,
+          attributes: {
+            rel: 'modulepreload',
+            type: undefined,
+          }
         }
       ],
       injectTo: 'head-prepend'

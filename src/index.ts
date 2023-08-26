@@ -62,7 +62,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     compiler.hooks.compilation.tap(name, async (compilation) => {
       const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
       const hooks = HTMLWebpackPlugin.getHooks(compilation)
-      let tags: any[] = []
+      let tagsAttributes: any[] = []
 
       hooks.alterAssetTagGroups.tapAsync(
         name,
@@ -71,7 +71,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
           compilation.chunks.forEach((chunk) => {
             chunk.files.forEach((file: string) => assets.add(file))
           })
-          tags = getTagsAttributes(assets, options, data.publicPath)
+          tagsAttributes = getTagsAttributes(assets, options, data.publicPath)
           cb(null, data)
         },
       )
@@ -80,6 +80,14 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
         hooks.beforeEmit.tapAsync(
           name,
           (data, cb) => {
+            const tags: HtmlTagDescriptor[] = []
+            tagsAttributes.forEach((attrs) => {
+              tags.push({
+                tag: 'link',
+                attrs,
+              })
+            })
+
             data.html = data.html.replace(
               customInject,
               (match, p1) => `\n${serializeTags(tags, p1)}`,
@@ -92,15 +100,21 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
         hooks.alterAssetTagGroups.tapAsync(
           name,
           (data, cb) => {
-            tags.forEach((attributes) => {
-              data.headTags[options.injectTo === 'head-prepend' ? 'unshift' : 'push']({
-                tagName: 'link',
-                attributes,
-                voidTag: true,
-                meta: {
-                  plugin: name,
+            tagsAttributes.forEach((attributes) => {
+              data.headTags[
+                options.injectTo === 'head'
+                  ? 'push'
+                  : 'unshift'
+              ](
+                {
+                  tagName: 'link',
+                  attributes,
+                  voidTag: true,
+                  meta: {
+                    plugin: name,
+                  },
                 },
-              })
+              )
             })
 
             cb(null, data)

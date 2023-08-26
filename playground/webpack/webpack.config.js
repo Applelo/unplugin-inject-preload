@@ -6,6 +6,7 @@ const UnpluginInjectPreload = require('unplugin-inject-preload/webpack').default
 module.exports = {
   entry: path.resolve(__dirname, './../src/main.ts'),
   output: {
+    publicPath: 'dist',
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -36,8 +37,24 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      inject: false,
+      minify: false,
+      templateContent: ({ htmlWebpackPlugin }) => `
+      <html>
+        <head>
+          <!--__unplugin-inject-preload__-->
+          ${htmlWebpackPlugin.tags.headTags}
+        </head>
+        <body>
+          <h1>Hello World</h1>
+          ${htmlWebpackPlugin.tags.bodyTags}
+        </body>
+      </html>
+    `,
+    }),
     UnpluginInjectPreload({
+      injectTo: 'custom',
       files: [
         {
           match: /Roboto-[a-zA-Z]*.[a-z-0-9]*\.woff2$/,

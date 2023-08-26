@@ -65,6 +65,7 @@
   "scripts": {
     "dev": "tsup --watch src",
     "build": "tsup",
+    "build:watch": "tsup --watch",
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
