@@ -1,0 +1,259 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`excerpt webpack > test auto 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test auto with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"/base/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test customAttributes 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test customAttributes with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"/base/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test customPosition 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
+
+    <link rel=\\"preload\\" href=\\"/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+    <link rel=\\"preload\\" href=\\"/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test customPosition with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
+
+    <link rel=\\"preload\\" href=\\"/base/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+    <link rel=\\"preload\\" href=\\"/base/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test injectBottom 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test injectBottom with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test modulepreload 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test modulepreload with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test noType 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"/Roboto-Regular-ec5068bd8823a38af494.woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-96e486355f319e0b182b.woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test noType with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"/base/Roboto-Italic-96e486355f319e0b182b.woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-ec5068bd8823a38af494.woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test wrongAttributes 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test wrongAttributes with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
