@@ -27,7 +27,7 @@ pnpm i -D unplugin-inject-preload
 
 ```ts
 // vite.config.ts
-import UnpluginInjectPreload from '../../src/vite'
+import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
 
 export default defineConfig({
   plugins: [
