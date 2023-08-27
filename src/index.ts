@@ -67,7 +67,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
       hooks.alterAssetTagGroups.tapAsync(
         name,
         (data, cb) => {
-          const assets = new Set(Object.keys(compilation.assets))
+          const assets = new Set(Object.keys(compilation.assets).sort())
           compilation.chunks.forEach((chunk) => {
             chunk.files.forEach((file: string) => assets.add(file))
           })
