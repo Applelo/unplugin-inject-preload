@@ -78,7 +78,7 @@ async function buildWebpack(pluginConfig: Options, config: Configuration = {}) {
 describe('excerpt webpack', () => {
   for (const key in configs) {
     if (Object.prototype.hasOwnProperty.call(configs, key)) {
-      const config = configs[key] as Options
+      const config = configs[key]
       it(`test ${key}`, async () => {
         const output = await buildWebpack(config)
         expect(output).toMatchSnapshot()

@@ -23,7 +23,7 @@ async function buildVite(pluginConfig: Options, config: InlineConfig = {}) {
 describe('excerpt vitejs', () => {
   for (const key in configs) {
     if (Object.prototype.hasOwnProperty.call(configs, key)) {
-      const config = configs[key] as Options
+      const config = configs[key]
       it(`test ${key}`, async () => {
         const output = await buildVite(config)
         expect(output).toMatchSnapshot()
