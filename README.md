@@ -1,6 +1,6 @@
 # unplugin-inject-preload
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-inject-preload?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-inject-preload)
+[![NPM version](https://img.shields.io/npm/v/unplugin-inject-preload?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-inject-preload) [![node-current](https://img.shields.io/node/v/unplugin-inject-preload)](https://nodejs.org/) [![Coverage Status](https://coveralls.io/repos/github/Applelo/unplugin-inject-preload/badge.svg?branch=main)](https://coveralls.io/github/Applelo/unplugin-inject-preload?branch=main)
 
 This plugin adds preload links by getting output assets from the build tools your using.
 
