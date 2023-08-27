@@ -29,7 +29,7 @@ describe('excerpt vitejs', () => {
         expect(output).toMatchSnapshot()
       })
 
-      it(`test ${key} with basePath`, async () => {
+      it.concurrent(`test ${key} with basePath`, async () => {
         const output = await buildVite(config, { base: '/base' })
         expect(output).toMatchSnapshot()
       })
