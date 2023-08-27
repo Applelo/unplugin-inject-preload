@@ -1,7 +1,7 @@
 export async function getHTMLWebpackPlugin() {
   try {
     const HTMLWebpackPlugin = await import('html-webpack-plugin')
-    return HTMLWebpackPlugin.default
+    return HTMLWebpackPlugin
   }
   catch (error) {
     throw new Error(

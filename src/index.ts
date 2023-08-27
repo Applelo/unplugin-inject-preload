@@ -61,7 +61,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
   webpack: (compiler) => {
     compiler.hooks.compilation.tap(name, async (compilation) => {
       const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
-      const hooks = HTMLWebpackPlugin.getHooks(compilation)
+      const hooks = HTMLWebpackPlugin.default.getHooks(compilation)
       let tagsAttributes: any[] = []
 
       hooks.alterAssetTagGroups.tapAsync(

@@ -69,9 +69,10 @@
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit src/**/*.ts",
     "prepublishOnly": "pnpm build",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "peerDependencies": {
     "html-webpack-plugin": ">=5.0.0"
