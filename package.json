@@ -17,6 +17,7 @@
     "unplugin",
     "vite",
     "webpack",
+    "html-webpack-plugin",
     "html",
     "link",
     "preload",
@@ -63,15 +64,13 @@
     "node": "^14.18.0 || >=16.0.0"
   },
   "scripts": {
-    "dev": "tsup --watch src",
     "build": "tsup",
     "build:watch": "tsup --watch",
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "play": "npm -C playground run dev",
-    "prepublishOnly": "npm run build",
-    "start": "esno src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build",
     "test": "vitest"
   },
   "peerDependencies": {
