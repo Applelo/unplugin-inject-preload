@@ -1,14 +1,14 @@
 import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
-import type { HtmlTagDescriptor, IndexHtmlTransformContext, Logger } from 'vite'
-import type { AssetsSet, Options } from './types'
+import type { HtmlTagDescriptor, IndexHtmlTransformContext } from 'vite'
+import type { AssetsSet, Options, UnpluginLogger } from './types'
 import { getHTMLWebpackPlugin } from './helper/getHTMLWebpackPlugin'
 import { getTagsAttributes } from './helper/getTagsAttributes'
 import { serializeTags } from './helper/serializer'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
 let viteBasePath: string
-let viteLogger: Logger
+let logger: UnpluginLogger
 const name = 'unplugin-inject-preload'
 
 export const unpluginFactory: UnpluginFactory<Options> = options => ({
@@ -18,7 +18,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     configResolved(config) {
       // Base path is sanitized by vite with the final trailing slash
       viteBasePath = config.base
-      viteLogger = config.logger
+      logger = config.logger
     },
     transformIndexHtml: {
       enforce: 'post',
@@ -46,7 +46,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
           assets,
           options,
           viteBasePath,
-          viteLogger.warn,
+          logger,
         )
 
         tagsAttributes.forEach((attrs) => {
@@ -71,6 +71,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
   },
   webpack: (compiler) => {
     compiler.hooks.compilation.tap(name, async (compilation) => {
+      logger = compilation.logger
       const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
       const hooks = HTMLWebpackPlugin.default.getHooks(compilation)
       let tagsAttributes: any[] = []
@@ -88,7 +89,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
             assets,
             options,
             data.publicPath,
-            compilation.logger.warn,
+            logger,
           )
           cb(null, data)
         },

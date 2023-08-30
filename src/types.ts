@@ -1,4 +1,5 @@
-import type { HtmlTagDescriptor } from 'vite'
+import type { HtmlTagDescriptor, Logger } from 'vite'
+import type { Compilation } from 'webpack'
 
 export interface OptionsFiles {
   /**
@@ -27,3 +28,4 @@ export interface Options {
 }
 
 export type AssetsSet = Set<{ entry: string; output: string }>
+export type UnpluginLogger = Logger | Compilation['logger']

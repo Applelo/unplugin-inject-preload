@@ -1,13 +1,13 @@
 import type { HtmlTagDescriptor } from 'vite'
 import { lookup as mimeLookup } from 'mime-types'
-import type { AssetsSet, Options } from '../types'
+import type { AssetsSet, Options, UnpluginLogger } from '../types'
 import { getAsWithMime } from './getAsWithMime'
 
 export function getTagsAttributes(
   assetsSet: AssetsSet,
   options: Options,
-  basePath = '',
-  warn = console.warn,
+  basePath: string,
+  log: UnpluginLogger,
 ) {
   const tagsAttributes = []
   const assets = Array.from(assetsSet)
@@ -18,7 +18,7 @@ export function getTagsAttributes(
     for (let index = 0; index < options.files.length; index++) {
       const file = options.files[index]
       if (!(file.entryMatch || file.outputMatch)) {
-        warn('[unplugin-inject-preload] You should have at least one option between entryMatch and outputMatch.')
+        log.warn('[unplugin-inject-preload] You should have at least one option between entryMatch and outputMatch.')
         continue
       }
       if (file.outputMatch && !file.outputMatch.test(asset.output))
