@@ -91,10 +91,11 @@ export default {
     UnpluginInjectPreload({
       files: [
         {
-          match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/
+          entryMatch: /Roboto-[a-zA-Z]*\.woff2$/,
+          outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/
         },
         {
-          match: /lazy.[a-z-0-9]*.(css|js)$/,
+          outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
         }
       ]
     })
@@ -105,7 +106,10 @@ export default {
 ### Options
 
 * files: An array of files object
-  * match: A regular expression to target build files you want to preload
+  * entryMatch: A regular expression to target entry files you want to preload
+  * outputMatch: A regular expression to target output build files you want to preload
+  > You need to set at least `entryMatch` or/and `outputMatch`. Be aware that entry file is not always present for webpack and `entryMatch` will do nothing.
+
   * attributes (optional):
   If this option is ommited, it will determine the `mime` and the `as` attributes automatically.
   You can also add/override any attributes you want.
@@ -122,7 +126,7 @@ export default {
     UnpluginInjectPreload({
       files: [
         {
-          match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+          outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
           attributes: {
             'type': 'font/woff2',
             'as': 'font',
@@ -131,7 +135,7 @@ export default {
           }
         },
         {
-          match: /lazy.[a-z-0-9]*.(js)$/,
+          outputMatch: /lazy.[a-z-0-9]*.(js)$/,
           attributes: {
             rel: 'modulepreload',
             type: undefined,

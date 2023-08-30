@@ -18,10 +18,10 @@ export default defineConfig({
     UnpluginInjectPreload({
       files: [
         {
-          match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+          outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
         },
         {
-          match: /lazy.[a-z-0-9]*.(css|js)$/,
+          outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
         },
       ],
       injectTo: 'custom',

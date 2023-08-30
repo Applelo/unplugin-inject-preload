@@ -1,13 +1,14 @@
 import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
-import type { HtmlTagDescriptor, IndexHtmlTransformContext } from 'vite'
-import type { Options } from './types'
+import type { HtmlTagDescriptor, IndexHtmlTransformContext, Logger } from 'vite'
+import type { AssetsSet, Options } from './types'
 import { getHTMLWebpackPlugin } from './helper/getHTMLWebpackPlugin'
 import { getTagsAttributes } from './helper/getTagsAttributes'
 import { serializeTags } from './helper/serializer'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
 let viteBasePath: string
+let viteLogger: Logger
 const name = 'unplugin-inject-preload'
 
 export const unpluginFactory: UnpluginFactory<Options> = options => ({
@@ -17,6 +18,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     configResolved(config) {
       // Base path is sanitized by vite with the final trailing slash
       viteBasePath = config.base
+      viteLogger = config.logger
     },
     transformIndexHtml: {
       enforce: 'post',
@@ -32,11 +34,20 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
             ? options.injectTo
             : 'head-prepend'
 
-        const assets = new Set(Object.keys(bundle)
-          .sort())
+        const outputs = Object.keys(bundle).sort()
+        const assets: AssetsSet = new Set()
+        outputs.forEach((output) => {
+          const entry = bundle[output].name || ''
+          assets.add({ entry, output })
+        })
 
         const tags: HtmlTagDescriptor[] = []
-        const tagsAttributes = getTagsAttributes(assets, options, viteBasePath)
+        const tagsAttributes = getTagsAttributes(
+          assets,
+          options,
+          viteBasePath,
+          viteLogger.warn,
+        )
 
         tagsAttributes.forEach((attrs) => {
           tags.push({
@@ -67,11 +78,18 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
       hooks.alterAssetTagGroups.tapAsync(
         name,
         (data, cb) => {
-          const assets = new Set(Object.keys(compilation.assets).sort())
-          compilation.chunks.forEach((chunk) => {
-            chunk.files.forEach((file: string) => assets.add(file))
+          const outputs = Object.keys(compilation.assetsInfo).sort()
+          const assets: AssetsSet = new Set()
+          outputs.forEach((output) => {
+            const entry = compilation.assetsInfo.get(output)?.sourceFilename || ''
+            assets.add({ entry, output })
           })
-          tagsAttributes = getTagsAttributes(assets, options, data.publicPath)
+          tagsAttributes = getTagsAttributes(
+            assets,
+            options,
+            data.publicPath,
+            compilation.logger.warn,
+          )
           cb(null, data)
         },
       )
