@@ -177,7 +177,7 @@ export default {
       files: [
         {
 -         match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
-+          outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
++         outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
           attributes: {
             'type': 'font/woff2',
             'as': 'font',
@@ -219,6 +219,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin(),
 -   new HtmlWebpackInjectPreload({
++   UnpluginInjectPreload({
       files: [
         {
 -         match: /.*\.woff2$/,
