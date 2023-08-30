@@ -27,7 +27,7 @@ export function getTagsAttributes(
         continue
 
       const attrs: HtmlTagDescriptor['attrs'] = file.attributes || {}
-      const href = `${basePath}${asset}`
+      const href = `${basePath}${asset.output}`
       const type = attrs.type ? attrs.type : mimeLookup(asset.output)
       const as
         = typeof type === 'string' ? getAsWithMime(type) : undefined

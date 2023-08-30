@@ -79,7 +79,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
       hooks.alterAssetTagGroups.tapAsync(
         name,
         (data, cb) => {
-          const outputs = Object.keys(compilation.assetsInfo).sort()
+          const outputs = Array.from(compilation.assetsInfo.keys()).sort()
           const assets: AssetsSet = new Set()
           outputs.forEach((output) => {
             const entry = compilation.assetsInfo.get(output)?.sourceFilename || ''

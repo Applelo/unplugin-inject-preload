@@ -11,6 +11,8 @@ Supporting:
 
 > This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
 
+> See the [migration guide](#migrate) for `vite-plugin-inject-preload` and `html-webpack-inject-preload` .
+
 ## Install
 
 ```bash
@@ -143,6 +145,90 @@ export default {
         }
       ],
       injectTo: 'head-prepend'
+    })
+  ]
+}
+```
+
+## Migration
+
+### From vite-plugin-inject-preload
+
+`package.json`
+
+```diff
+{
+  "devDependencies": {
+-   "vite-plugin-inject-preload": "*",
++   "unplugin-inject-preload": "^1.1.0",
+  }
+}
+```
+
+`vite.config.js`
+
+```diff
+- import VitePluginInjectPreload from 'vite-plugin-inject-preload'
++ import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
+
+export default {
+  plugins: [
+    VitePluginInjectPreload({
+      files: [
+        {
+-         match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
++          outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+          attributes: {
+            'type': 'font/woff2',
+            'as': 'font',
+            'crossorigin': 'anonymous',
+            'data-font': 'Roboto'
+          }
+        },
+      ],
+      injectTo: 'head-prepend'
+    })
+  ]
+}
+```
+
+### From html-webpack-inject-preload
+
+`package.json`
+
+```diff
+{
+  "devDependencies": {
+-   "@principalstudio/html-webpack-inject-preload": "*",
++   "unplugin-inject-preload": "^1.1.0",
+  }
+}
+```
+
+```diff
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+- const HtmlWebpackInjectPreload = require('@principalstudio/html-webpack-inject-preload');
++ const UnpluginInjectPreload = require('unplugin-inject-preload/webpack');
+
+module.exports = {
+  entry: 'index.js',
+  output: {
+    path: __dirname + '/dist',
+    filename: 'index_bundle.js'
+  },
+  plugins: [
+    new HtmlWebpackPlugin(),
+-   new HtmlWebpackInjectPreload({
+      files: [
+        {
+-         match: /.*\.woff2$/,
++         outputMatch: /.*\.woff2$/,
+          attributes: {
+            as: 'font',
+            type: 'font/woff2', crossorigin: true
+          },
+        },
+      ]
     })
   ]
 }
