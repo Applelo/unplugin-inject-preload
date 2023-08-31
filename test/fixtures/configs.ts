@@ -79,4 +79,12 @@ export default {
       },
     ],
   },
+  entryMatch: {
+    files: [
+      {
+        entryMatch: /Roboto-[a-zA-Z]*\.woff2$/,
+      },
+    ],
+    injectTo: 'head',
+  },
 } satisfies Record<string, Options>
