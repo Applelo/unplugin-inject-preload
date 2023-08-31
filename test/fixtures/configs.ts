@@ -87,4 +87,13 @@ export default {
     ],
     injectTo: 'head',
   },
+  noMatch: {
+    files: [
+      {
+        attributes: {
+          rel: 'modulepreload',
+        },
+      },
+    ],
+  },
 } satisfies Record<string, Options>

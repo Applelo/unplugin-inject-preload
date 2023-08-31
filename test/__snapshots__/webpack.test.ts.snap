@@ -222,6 +222,42 @@ exports[`excerpt webpack > test modulepreload with basePath 1`] = `
 "
 `;
 
+exports[`excerpt webpack > test noMatch 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`excerpt webpack > test noMatch with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Webpack App</title>
+    <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
+    <!--__unplugin-inject-preload__-->
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
 exports[`excerpt webpack > test noType 1`] = `
 "<!DOCTYPE html>
 <html>
