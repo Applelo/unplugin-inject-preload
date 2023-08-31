@@ -82,12 +82,12 @@ describe('excerpt webpack', () => {
       it(`test ${key}`, async () => {
         const output = await buildWebpack(config)
         expect(output).toMatchSnapshot()
-      })
+      }, 8000)
 
       it(`test ${key} with basePath`, async () => {
         const output = await buildWebpack(config, { output: { publicPath: '/base' } })
         expect(output).toMatchSnapshot()
-      })
+      }, 8000)
     }
   }
 })

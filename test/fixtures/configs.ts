@@ -4,10 +4,10 @@ export default {
   injectBottom: {
     files: [
       {
-        match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
       },
       {
-        match: /lazy.[a-z-0-9]*.(css|js)$/,
+        outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
       },
     ],
     injectTo: 'head',
@@ -15,7 +15,7 @@ export default {
   customAttributes: {
     files: [
       {
-        match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
         attributes: {
           'as': 'font',
           'crossorigin': 'anonymous',
@@ -28,23 +28,23 @@ export default {
   auto: {
     files: [
       {
-        match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
       },
       {
-        match: /lazy.[a-z-0-9]*.(css|js)$/,
+        outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
       },
     ],
   },
   customPosition: {
     files: [
       {
-        match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
         attributes: {
           'data-vite-plugin-inject-preload': true,
         },
       },
       {
-        match: /lazy.[a-z-0-9]*.(css|js)$/,
+        outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
       },
     ],
     injectTo: 'custom',
@@ -52,7 +52,7 @@ export default {
   wrongAttributes: {
     files: [
       {
-        match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
         attributes: {
           href: './yolo.woff2',
         },
@@ -62,7 +62,7 @@ export default {
   noType: {
     files: [
       {
-        match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
         attributes: {
           type: undefined,
         },
@@ -72,7 +72,24 @@ export default {
   modulepreload: {
     files: [
       {
-        match: /lazy.[a-z-0-9]*.(js)$/,
+        outputMatch: /lazy.[a-z-0-9]*.(js)$/,
+        attributes: {
+          rel: 'modulepreload',
+        },
+      },
+    ],
+  },
+  entryMatch: {
+    files: [
+      {
+        entryMatch: /Roboto-[a-zA-Z]*\.woff2$/,
+      },
+    ],
+    injectTo: 'head',
+  },
+  noMatch: {
+    files: [
+      {
         attributes: {
           rel: 'modulepreload',
         },

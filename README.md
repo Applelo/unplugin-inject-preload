@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-inject-preload?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-inject-preload) [![node-current](https://img.shields.io/node/v/unplugin-inject-preload)](https://nodejs.org/) [![Coverage Status](https://coveralls.io/repos/github/Applelo/unplugin-inject-preload/badge.svg?branch=main)](https://coveralls.io/github/Applelo/unplugin-inject-preload?branch=main)
 
-This plugin adds preload links by getting output assets from the build tools your using.
+This plugin adds preload links by getting output assets from the build tools you are using.
 
 Supporting:
 - Vite 3 and 4 (on build only)
@@ -10,6 +10,8 @@ Supporting:
 <!-- - Rspack -->
 
 > This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
+
+> See the [migration guide](#migrate) for `vite-plugin-inject-preload` and `html-webpack-inject-preload` .
 
 ## Install
 
@@ -91,10 +93,10 @@ export default {
     UnpluginInjectPreload({
       files: [
         {
-          match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/
+          entryMatch: /Roboto-[a-zA-Z]*\.woff2$/,
         },
         {
-          match: /lazy.[a-z-0-9]*.(css|js)$/,
+          outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
         }
       ]
     })
@@ -105,7 +107,10 @@ export default {
 ### Options
 
 * files: An array of files object
-  * match: A regular expression to target build files you want to preload
+  * entryMatch: A regular expression to target entry files you want to preload
+  * outputMatch: A regular expression to target output build files you want to preload
+  > You need to set at least `entryMatch` or/and `outputMatch`. Be aware that entry file is not always present for webpack and `entryMatch` will do nothing.
+
   * attributes (optional):
   If this option is ommited, it will determine the `mime` and the `as` attributes automatically.
   You can also add/override any attributes you want.
@@ -122,7 +127,8 @@ export default {
     UnpluginInjectPreload({
       files: [
         {
-          match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+          entryMatch: /Roboto-[a-zA-Z]*\.woff2$/,
+          outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
           attributes: {
             'type': 'font/woff2',
             'as': 'font',
@@ -131,7 +137,7 @@ export default {
           }
         },
         {
-          match: /lazy.[a-z-0-9]*.(js)$/,
+          outputMatch: /lazy.[a-z-0-9]*.(js)$/,
           attributes: {
             rel: 'modulepreload',
             type: undefined,
@@ -139,6 +145,91 @@ export default {
         }
       ],
       injectTo: 'head-prepend'
+    })
+  ]
+}
+```
+
+## Migration
+
+### From vite-plugin-inject-preload
+
+`package.json`
+
+```diff
+{
+  "devDependencies": {
+-   "vite-plugin-inject-preload": "*",
++   "unplugin-inject-preload": "^1.1.0",
+  }
+}
+```
+
+`vite.config.js`
+
+```diff
+- import VitePluginInjectPreload from 'vite-plugin-inject-preload'
++ import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
+
+export default {
+  plugins: [
+    VitePluginInjectPreload({
+      files: [
+        {
+-         match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
++         outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+          attributes: {
+            'type': 'font/woff2',
+            'as': 'font',
+            'crossorigin': 'anonymous',
+            'data-font': 'Roboto'
+          }
+        },
+      ],
+      injectTo: 'head-prepend'
+    })
+  ]
+}
+```
+
+### From html-webpack-inject-preload
+
+`package.json`
+
+```diff
+{
+  "devDependencies": {
+-   "@principalstudio/html-webpack-inject-preload": "*",
++   "unplugin-inject-preload": "^1.1.0",
+  }
+}
+```
+
+```diff
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+- const HtmlWebpackInjectPreload = require('@principalstudio/html-webpack-inject-preload');
++ const UnpluginInjectPreload = require('unplugin-inject-preload/webpack');
+
+module.exports = {
+  entry: 'index.js',
+  output: {
+    path: __dirname + '/dist',
+    filename: 'index_bundle.js'
+  },
+  plugins: [
+    new HtmlWebpackPlugin(),
+-   new HtmlWebpackInjectPreload({
++   UnpluginInjectPreload({
+      files: [
+        {
+-         match: /.*\.woff2$/,
++         outputMatch: /.*\.woff2$/,
+          attributes: {
+            as: 'font',
+            type: 'font/woff2', crossorigin: true
+          },
+        },
+      ]
     })
   ]
 }

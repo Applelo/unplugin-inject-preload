@@ -1,9 +1,14 @@
 import type { HtmlTagDescriptor } from 'vite'
 import { lookup as mimeLookup } from 'mime-types'
-import type { Options } from '../types'
+import type { AssetsSet, Options, UnpluginLogger } from '../types'
 import { getAsWithMime } from './getAsWithMime'
 
-export function getTagsAttributes(assetsSet: Set<string>, options: Options, basePath = '') {
+export function getTagsAttributes(
+  assetsSet: AssetsSet,
+  options: Options,
+  basePath: string,
+  log: UnpluginLogger,
+) {
   const tagsAttributes = []
   const assets = Array.from(assetsSet)
 
@@ -12,12 +17,18 @@ export function getTagsAttributes(assetsSet: Set<string>, options: Options, base
 
     for (let index = 0; index < options.files.length; index++) {
       const file = options.files[index]
-      if (!file.match.test(asset))
+      if (!(file.entryMatch || file.outputMatch)) {
+        log.warn('[unplugin-inject-preload] You should have at least one option between entryMatch and outputMatch.')
+        continue
+      }
+      if (file.outputMatch && !file.outputMatch.test(asset.output))
+        continue
+      if (file.entryMatch && !file.entryMatch.test(asset.entry))
         continue
 
       const attrs: HtmlTagDescriptor['attrs'] = file.attributes || {}
-      const href = `${basePath}${asset}`
-      const type = attrs.type ? attrs.type : mimeLookup(asset)
+      const href = `${basePath}${asset.output}`
+      const type = attrs.type ? attrs.type : mimeLookup(asset.output)
       const as
         = typeof type === 'string' ? getAsWithMime(type) : undefined
 

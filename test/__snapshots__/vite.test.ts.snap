@@ -134,6 +134,46 @@ exports[`excerpt vitejs > test customPosition with basePath 1`] = `
 </html>"
 `;
 
+exports[`excerpt vitejs > test entryMatch 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+  <head>
+    <meta charset=\\"UTF-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Unplugin Inject Preload</title>
+    <!--__unplugin-inject-preload__-->
+    <script type=\\"module\\" crossorigin src=\\"/assets/index-250563bc.js\\"></script>
+    <link rel=\\"stylesheet\\" href=\\"/assets/index-6e93ae19.css\\">
+    <link rel=\\"preload\\" href=\\"/assets/Roboto-Italic-7d6fc55f.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+    <link rel=\\"preload\\" href=\\"/assets/Roboto-Regular-a9876de8.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>"
+`;
+
+exports[`excerpt vitejs > test entryMatch with basePath 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+  <head>
+    <meta charset=\\"UTF-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Unplugin Inject Preload</title>
+    <!--__unplugin-inject-preload__-->
+    <script type=\\"module\\" crossorigin src=\\"/base/assets/index-01788e7d.js\\"></script>
+    <link rel=\\"stylesheet\\" href=\\"/base/assets/index-30f5c21d.css\\">
+    <link rel=\\"preload\\" href=\\"/base/assets/Roboto-Italic-7d6fc55f.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+    <link rel=\\"preload\\" href=\\"/base/assets/Roboto-Regular-a9876de8.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>"
+`;
+
 exports[`excerpt vitejs > test injectBottom 1`] = `
 "<!DOCTYPE html>
 <html lang=\\"en\\">
@@ -204,6 +244,42 @@ exports[`excerpt vitejs > test modulepreload with basePath 1`] = `
   <head>
     <link rel=\\"modulepreload\\" href=\\"/base/assets/lazy-9f7f47b2.js\\" type=\\"application/javascript\\" as=\\"script\\">
 
+    <meta charset=\\"UTF-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Unplugin Inject Preload</title>
+    <!--__unplugin-inject-preload__-->
+    <script type=\\"module\\" crossorigin src=\\"/base/assets/index-01788e7d.js\\"></script>
+    <link rel=\\"stylesheet\\" href=\\"/base/assets/index-30f5c21d.css\\">
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>"
+`;
+
+exports[`excerpt vitejs > test noMatch 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+  <head>
+    <meta charset=\\"UTF-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Unplugin Inject Preload</title>
+    <!--__unplugin-inject-preload__-->
+    <script type=\\"module\\" crossorigin src=\\"/assets/index-250563bc.js\\"></script>
+    <link rel=\\"stylesheet\\" href=\\"/assets/index-6e93ae19.css\\">
+  </head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>"
+`;
+
+exports[`excerpt vitejs > test noMatch with basePath 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+  <head>
     <meta charset=\\"UTF-8\\" />
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
     <title>Unplugin Inject Preload</title>
