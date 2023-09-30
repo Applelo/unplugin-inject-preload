@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "module": "esnext",
     "lib": ["esnext", "DOM"],
+    "module": "esnext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "strict": true,
-    "strictNullChecks": true,
-    "resolveJsonModule": true
+    "strictNullChecks": true
   },
   "include": ["src"]
 }
