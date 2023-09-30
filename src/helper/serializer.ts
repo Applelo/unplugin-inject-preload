@@ -18,7 +18,6 @@ function serializeTag({ tag, attrs }: HtmlTagDescriptor): string {
   return `<${tag}${serializeAttrs(attrs)}>`
 }
 
-export function serializeTags(tags: HtmlTagDescriptor[],
-  indent = ''): string {
+export function serializeTags(tags: HtmlTagDescriptor[], indent = ''): string {
   return tags.map(tag => `${indent}${serializeTag(tag)}\n`).join('')
 }

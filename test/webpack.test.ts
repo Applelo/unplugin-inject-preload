@@ -10,7 +10,7 @@ import type { Options } from './../src/types'
 import configs from './fixtures/configs'
 
 async function buildWebpack(pluginConfig: Options, config: Configuration = {}) {
-  return new Promise(((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const compiler = webpack({
       mode: 'production',
       context: join(__dirname, 'fixtures/webpack'),
@@ -72,7 +72,7 @@ async function buildWebpack(pluginConfig: Options, config: Configuration = {}) {
 
       resolve(result)
     })
-  }))
+  })
 }
 
 describe('excerpt webpack', () => {
