@@ -12,6 +12,7 @@ Supporting:
 > [!NOTE]
 > This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
 
+> [!NOTE]
 > See the [migration guide](#migrate) for `vite-plugin-inject-preload` and `html-webpack-inject-preload` .
 
 ## Install
