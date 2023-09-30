@@ -5,10 +5,11 @@
 This plugin adds preload links by getting output assets from the build tools you are using.
 
 Supporting:
-- Vite 3 and 4 (on build only)
+- Vite 3 and 4 **(on build only)**
 - Webpack 5 (with HTMLWebpackPlugin 5)
 <!-- - Rspack -->
 
+> [!NOTE]
 > This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
 
 > See the [migration guide](#migrate) for `vite-plugin-inject-preload` and `html-webpack-inject-preload` .
@@ -39,6 +40,9 @@ export default defineConfig({
 ```
 
 Example: [`playground/vitejs`](./playground/vitejs)
+
+> [!IMPORTANT]
+> The Vite plugin [only works on build](https://github.com/Applelo/vite-plugin-inject-preload/issues/15) because of the way Vite behave.
 
 <br></details>
 
