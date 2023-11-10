@@ -6,8 +6,5 @@
   },
   "devDependencies": {
     "@rspack/cli": "0.3.11"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
