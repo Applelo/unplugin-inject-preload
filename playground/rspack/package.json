@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "rspack serve",
+    "build": "rspack build"
+  },
+  "devDependencies": {
+    "@rspack/cli": "0.3.11"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -41,6 +41,7 @@ module.exports = {
       inject: false,
       minify: false,
       templateContent: ({ htmlWebpackPlugin }) => `
+      <!DOCTYPE html>
       <html>
         <head>
           <!--__unplugin-inject-preload__-->
