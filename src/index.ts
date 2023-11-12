@@ -1,14 +1,14 @@
 import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
-import type { HtmlTagDescriptor, IndexHtmlTransformContext } from 'vite'
-import type { AssetsSet, Options, UnpluginLogger } from './types'
-import { getHTMLWebpackPlugin } from './helper/getHTMLWebpackPlugin'
+import type { HtmlTagDescriptor, IndexHtmlTransformContext, Logger } from 'vite'
+import type { AssetsSet, Options } from './types'
 import { getTagsAttributes } from './helper/getTagsAttributes'
 import { serializeTags } from './helper/serializer'
+import { htmlWebpackPluginAdapter } from './adapter/HTMLWebpackPlugin'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
 let viteBasePath: string
-let logger: UnpluginLogger
+let viteLogger: Logger
 const name = 'unplugin-inject-preload'
 
 export const unpluginFactory: UnpluginFactory<Options> = options => ({
@@ -18,7 +18,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     configResolved(config) {
       // Base path is sanitized by vite with the final trailing slash
       viteBasePath = config.base
-      logger = config.logger
+      viteLogger = config.logger
     },
     transformIndexHtml: {
       enforce: 'post',
@@ -46,7 +46,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
           assets,
           options,
           viteBasePath,
-          logger,
+          viteLogger,
         )
 
         tagsAttributes.forEach((attrs) => {
@@ -70,76 +70,19 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     },
   },
   webpack: (compiler) => {
-    compiler.hooks.compilation.tap(name, async (compilation) => {
-      logger = compilation.logger
-      const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
-      const hooks = HTMLWebpackPlugin.default.getHooks(compilation)
-      let tagsAttributes: any[] = []
-
-      hooks.alterAssetTagGroups.tapAsync(
-        name,
-        (data, cb) => {
-          const outputs = Array.from(compilation.assetsInfo.keys()).sort()
-          const assets: AssetsSet = new Set()
-          outputs.forEach((output) => {
-            const entry = compilation.assetsInfo.get(output)?.sourceFilename || ''
-            assets.add({ entry, output })
-          })
-          tagsAttributes = getTagsAttributes(
-            assets,
-            options,
-            data.publicPath,
-            logger,
-          )
-          cb(null, data)
-        },
-      )
-
-      if (options.injectTo === 'custom') {
-        hooks.beforeEmit.tapAsync(
-          name,
-          (data, cb) => {
-            const tags: HtmlTagDescriptor[] = []
-            tagsAttributes.forEach((attrs) => {
-              tags.push({
-                tag: 'link',
-                attrs,
-              })
-            })
-
-            data.html = data.html.replace(
-              customInject,
-              (match, p1) => `\n${serializeTags(tags, p1)}`,
-            )
-            cb(null, data)
-          },
-        )
-      }
-      else {
-        hooks.alterAssetTagGroups.tapAsync(
-          name,
-          (data, cb) => {
-            tagsAttributes.forEach((attributes) => {
-              data.headTags[
-                options.injectTo === 'head'
-                  ? 'push'
-                  : 'unshift'
-              ](
-                {
-                  tagName: 'link',
-                  attributes,
-                  voidTag: true,
-                  meta: {
-                    plugin: name,
-                  },
-                },
-              )
-            })
-
-            cb(null, data)
-          },
-        )
-      }
+    htmlWebpackPluginAdapter({
+      name,
+      compiler,
+      options,
+      customInject,
+    })
+  },
+  rspack: (compiler) => {
+    htmlWebpackPluginAdapter({
+      name,
+      compiler,
+      options,
+      customInject,
     })
   },
 })

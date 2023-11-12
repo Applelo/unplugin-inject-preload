@@ -17,7 +17,7 @@ export function getTagsAttributes(
 
     for (let index = 0; index < options.files.length; index++) {
       const file = options.files[index]
-      if (!(file.entryMatch || file.outputMatch)) {
+      if (!file.entryMatch && !file.outputMatch) {
         log.warn('[unplugin-inject-preload] You should have at least one option between entryMatch and outputMatch.')
         continue
       }

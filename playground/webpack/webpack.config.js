@@ -58,7 +58,7 @@ module.exports = {
       injectTo: 'custom',
       files: [
         {
-          outputmatch: /Roboto-[a-zA-Z]*.[a-z-0-9]*\.woff2$/,
+          outputMatch: /Roboto-[a-zA-Z]*.[a-z-0-9]*\.woff2$/,
         },
         {
           outputMatch: /^(?!main).*\.(css|js)$/,

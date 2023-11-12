@@ -2,7 +2,7 @@
   "name": "unplugin-inject-preload",
   "type": "module",
   "version": "1.2.0",
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "pnpm@8.10.3",
   "description": "Inject <link rel='preload'> for Webpack/ViteJS",
   "license": "MIT",
   "homepage": "https://github.com/applelo/unplugin-inject-preload#readme",
@@ -17,6 +17,7 @@
     "unplugin",
     "vite",
     "webpack",
+    "rspack",
     "html-webpack-plugin",
     "html",
     "link",
@@ -38,6 +39,11 @@
       "types": "./dist/webpack.d.ts",
       "import": "./dist/webpack.js",
       "require": "./dist/webpack.cjs"
+    },
+    "./rspack": {
+      "types": "./dist/rspack.d.ts",
+      "import": "./dist/rspack.js",
+      "require": "./dist/rspack.cjs"
     },
     "./types": {
       "types": "./dist/types.d.ts",
@@ -88,6 +94,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.1.0",
+    "@rspack/core": "^0.3.11",
     "@types/mime-types": "^2.1.4",
     "@types/node": "^20.9.0",
     "@vitest/coverage-v8": "^0.34.6",

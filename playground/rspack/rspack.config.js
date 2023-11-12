@@ -1,4 +1,6 @@
-const rspack = require('@rspack/core')
+// const rspack = require('@rspack/core')
+const UnpluginInjectPreload = require('unplugin-inject-preload/rspack').default
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 /** @type {import('@rspack/cli').Configuration} */
 const config = {
@@ -24,18 +26,46 @@ const config = {
     ],
   },
   plugins: [
-    new rspack.HtmlRspackPlugin({
+    // new rspack.HtmlRspackPlugin({
+    //   minify: false,
+    //   templateContent: `
+    //   <!DOCTYPE html>
+    //   <html>
+    //     <head>
+    //       <!--__unplugin-inject-preload__-->
+    //     </head>
+    //     <body>
+    //       <h1>Hello World</h1>
+    //     </body>
+    //   </html>`,
+    // }),
+    new HtmlWebpackPlugin({
+      inject: false,
       minify: false,
-      templateContent: `
+      templateContent: ({ htmlWebpackPlugin }) => `
       <!DOCTYPE html>
       <html>
         <head>
           <!--__unplugin-inject-preload__-->
+          ${htmlWebpackPlugin.tags.headTags}
         </head>
         <body>
           <h1>Hello World</h1>
+          ${htmlWebpackPlugin.tags.bodyTags}
         </body>
-      </html>`,
+      </html>
+    `,
+    }),
+    UnpluginInjectPreload({
+      injectTo: 'custom',
+      files: [
+        {
+          outputMatch: /Roboto-[a-zA-Z]*.[a-z-0-9]*\.woff2$/,
+        },
+        {
+          outputMatch: /^(?!main).*\.(css|js)$/,
+        },
+      ],
     }),
   ],
 }
