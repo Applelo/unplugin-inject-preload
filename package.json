@@ -94,7 +94,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.1.0",
-    "@rspack/core": "^0.3.11",
+    "@rspack/core": "^0.3.12",
     "@types/mime-types": "^2.1.4",
     "@types/node": "^20.9.0",
     "@vitest/coverage-v8": "^0.34.6",
@@ -105,7 +105,7 @@
     "mini-css-extract-plugin": "^2.7.6",
     "ts-loader": "^9.5.0",
     "tsup": "^7.2.0",
-    "tsx": "^4.1.0",
+    "tsx": "^4.1.2",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
     "vitest": "^0.34.6",
