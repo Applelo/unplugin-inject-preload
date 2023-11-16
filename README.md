@@ -5,7 +5,7 @@
 This plugin adds preload links by getting output assets from the build tools you are using.
 
 Supporting:
-- Vite 3 and 4 **(on build only)**
+- Vite 4 and 5 **(on build only)**
 - Webpack 5 (with HTMLWebpackPlugin 5)
 - Rspack (with HTMLWebpackPlugin 5)
 
@@ -185,7 +185,7 @@ export default {
 {
   "devDependencies": {
 -   "vite-plugin-inject-preload": "*",
-+   "unplugin-inject-preload": "^1.2.0",
++   "unplugin-inject-preload": "^2.0.0",
   }
 }
 ```
@@ -225,7 +225,7 @@ export default {
 {
   "devDependencies": {
 -   "@principalstudio/html-webpack-inject-preload": "*",
-+   "unplugin-inject-preload": "^1.2.0",
++   "unplugin-inject-preload": "^2.0.0",
   }
 }
 ```

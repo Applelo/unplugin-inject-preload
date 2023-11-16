@@ -21,8 +21,8 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
       viteLogger = config.logger
     },
     transformIndexHtml: {
-      enforce: 'post',
-      transform(html, ctx) {
+      order: 'post',
+      handler(html, ctx) {
         const bundle: IndexHtmlTransformContext['bundle'] = ctx.bundle
         // ignore next because the bundle will be always here on build
         /* c8 ignore next */

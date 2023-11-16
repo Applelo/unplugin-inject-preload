@@ -14,8 +14,12 @@ export function htmlWebpackPluginAdapter(args: {
 }) {
   const { name, compiler, options, customInject } = args
   compiler.hooks.compilation.tap(name, async (compilation) => {
+    const isWebpack = 'assetsInfo' in compilation
     const logger = compilation.getLogger(name)
-    const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
+    const HTMLWebpackPlugin = await getHTMLWebpackPlugin(isWebpack)
+    if (!HTMLWebpackPlugin)
+      return
+
     const hooks = HTMLWebpackPlugin.default.getHooks(compilation as Compilation)
     let tagsAttributes: any[] = []
 
@@ -27,7 +31,7 @@ export function htmlWebpackPluginAdapter(args: {
         let assetsInfo: Compilation['assetsInfo'] = new Map()
 
         // webpack
-        if ('assetsInfo' in compilation) {
+        if (isWebpack) {
           assetsInfo = compilation.assetsInfo
           outputs = Array.from(compilation.assetsInfo.keys()).sort()
         }
