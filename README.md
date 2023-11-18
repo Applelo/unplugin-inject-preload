@@ -6,8 +6,8 @@ This plugin adds preload links by getting output assets from the build tools you
 
 Supporting:
 - Vite 4 and 5 **(on build only)**
-- Webpack 5 (with HtmlWebpackPlugin 5)
-- Rspack (with HtmlWebpackPlugin 5)
+- Webpack 5 (with [HtmlWebpackPlugin 5](https://github.com/jantimon/html-webpack-plugin))
+- Rspack (with [HtmlWebpackPlugin 5](https://github.com/jantimon/html-webpack-plugin) or [HtmlRspackPlugin](https://www.rspack.dev/config/plugins.html#htmlrspackplugin))
 
 > [!NOTE]
 > This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
@@ -55,7 +55,7 @@ const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
 
 module.exports = {
   plugins: [
-    HtmlWebpackPlugin(),
+    HtmlWebpackPlugin({ /*  HtmlWebpackPlugin options */ }),
     UnpluginInjectPreload({ /* options */ }),
   ]
 }
@@ -75,7 +75,27 @@ const UnpluginInjectPreload = require('unplugin-inject-preload/rspack')
 
 module.exports = {
   plugins: [
-    HtmlWebpackPlugin(),
+    HtmlWebpackPlugin({ /*  HtmlWebpackPlugin options */ }),
+    UnpluginInjectPreload({ /* options */ }),
+  ]
+}
+```
+
+Example: [`playground/rspack`](./playground/rspack)
+
+<br></details>
+
+<details>
+<summary>Rspack (with HtmlRspackPlugin)</summary><br>
+
+```ts
+// rspack.config.js
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UnpluginInjectPreload = require('unplugin-inject-preload/rspack')
+
+module.exports = {
+  plugins: [
+    new rspack.HtmlRspackPlugin({ /* HtmlRspackPlugin options */ }),
     UnpluginInjectPreload({ /* options */ }),
   ]
 }

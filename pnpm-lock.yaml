@@ -14,6 +14,9 @@ importers:
       unplugin:
         specifier: ^1.5.1
         version: 1.5.1
+      webpack-sources:
+        specifier: ^3.2.3
+        version: 3.2.3
     devDependencies:
       '@antfu/eslint-config':
         specifier: 1.2.1
@@ -72,9 +75,6 @@ importers:
       webpack:
         specifier: ^5.89.0
         version: 5.89.0(esbuild@0.19.5)(webpack-cli@5.1.4)
-      webpack-sources:
-        specifier: ^3.2.3
-        version: 3.2.3
 
   playground/rspack:
     devDependencies:
