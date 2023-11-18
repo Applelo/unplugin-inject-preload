@@ -3,16 +3,15 @@ import type { HtmlTagDescriptor } from 'vite'
 import { getHtmlWebpackPlugin } from '../helper/getHtmlWebpackPlugin'
 import type { Options, UnpluginCompiler } from '../types'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
-import { serializeTags } from '../helper/serializer'
+import { injectToCustom } from '../helper/html'
 import { getAssetsForWebpackOrRspack } from '../helper/getAssets'
 
 export function htmlWebpackPluginAdapter(args: {
   name: string
   compiler: UnpluginCompiler
   options: Options
-  customInject: RegExp
 }) {
-  const { name, compiler, options, customInject } = args
+  const { name, compiler, options } = args
   compiler.hooks.compilation.tap(name, async (compilation) => {
     const isWebpack = 'assetsInfo' in compilation
     const logger = compilation.getLogger(name)
@@ -50,10 +49,7 @@ export function htmlWebpackPluginAdapter(args: {
             })
           })
 
-          data.html = data.html.replace(
-            customInject,
-            (match, p1) => `\n${serializeTags(tags, p1)}`,
-          )
+          data.html = injectToCustom(data.html, tags)
           cb(null, data)
         },
       )

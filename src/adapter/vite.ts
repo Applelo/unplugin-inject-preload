@@ -3,13 +3,12 @@ import type { OutputBundle } from 'rollup'
 import { getAssetsForViteJS } from '../helper/getAssets'
 import type { Options } from '../types'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
-import { serializeTags } from '../helper/serializer'
+import { injectToCustom } from '../helper/html'
 
 export function viteAdapter(args: {
   bundle: OutputBundle
   html: string
   options: Options
-  customInject: RegExp
   viteBasePath: string
   viteLogger: Logger
 }) {
@@ -17,7 +16,6 @@ export function viteAdapter(args: {
     bundle,
     html,
     options,
-    customInject,
     viteBasePath,
     viteLogger,
   } = args
@@ -44,13 +42,8 @@ export function viteAdapter(args: {
     })
   })
 
-  if (options.injectTo === 'custom') {
-    return html.replace(
-      customInject,
-      (match, p1) => `\n${serializeTags(tags, p1)}`,
-    )
-  }
-  else {
+  if (options.injectTo === 'custom')
+    return injectToCustom(html, tags)
+  else
     return tags
-  }
 }

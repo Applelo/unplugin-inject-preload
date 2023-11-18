@@ -6,7 +6,6 @@ import { htmlRspackPluginAdapter } from './adapter/HtmlRspackPlugin'
 import { htmlWebpackPluginAdapter } from './adapter/HtmlWebpackPlugin'
 import { viteAdapter } from './adapter/vite'
 
-const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
 let viteBasePath: string
 let viteLogger: Logger
 const name = 'unplugin-inject-preload'
@@ -34,7 +33,6 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
           bundle,
           html,
           options,
-          customInject,
           viteBasePath,
           viteLogger,
         })
@@ -46,23 +44,16 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
       name,
       compiler,
       options,
-      customInject,
     })
   },
   rspack: (compiler) => {
-    htmlRspackPluginAdapter({
+    const adapterObj = {
       name,
       compiler,
       options,
-      customInject,
-    })
-
-    htmlWebpackPluginAdapter({
-      name,
-      compiler,
-      options,
-      customInject,
-    })
+    }
+    htmlRspackPluginAdapter(adapterObj)
+    htmlWebpackPluginAdapter(adapterObj)
   },
 })
 
