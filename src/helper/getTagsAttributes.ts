@@ -30,7 +30,7 @@ export function getTagsAttributes(
       const href = `${basePath}${asset.output}`
       const type = attrs.type ? attrs.type : mimeLookup(asset.output)
       const as
-        = typeof type === 'string' ? getAsWithMime(type) : undefined
+        = typeof type === 'string' ? getAsWithMime(type, log) : undefined
 
       const finalAttrs = Object.assign(
         {

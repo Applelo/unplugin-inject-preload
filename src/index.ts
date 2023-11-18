@@ -1,9 +1,11 @@
 import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 import type { HtmlTagDescriptor, IndexHtmlTransformContext, Logger } from 'vite'
-import type { AssetsSet, Options } from './types'
+import type { Options } from './types'
 import { getTagsAttributes } from './helper/getTagsAttributes'
 import { serializeTags } from './helper/serializer'
+import { getAssetsForViteJS } from './helper/getAssets'
+import { htmlRspackPluginAdapter } from './adapter/HtmlRspackPlugin'
 import { htmlWebpackPluginAdapter } from './adapter/HTMLWebpackPlugin'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
@@ -34,13 +36,7 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
             ? options.injectTo
             : 'head-prepend'
 
-        const outputs = Object.keys(bundle).sort()
-        const assets: AssetsSet = new Set()
-        outputs.forEach((output) => {
-          const entry = bundle[output].name || ''
-          assets.add({ entry, output })
-        })
-
+        const assets = getAssetsForViteJS(bundle)
         const tags: HtmlTagDescriptor[] = []
         const tagsAttributes = getTagsAttributes(
           assets,
@@ -78,6 +74,13 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     })
   },
   rspack: (compiler) => {
+    htmlRspackPluginAdapter({
+      name,
+      compiler,
+      options,
+      customInject,
+    })
+
     htmlWebpackPluginAdapter({
       name,
       compiler,

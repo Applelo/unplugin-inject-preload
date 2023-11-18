@@ -1,14 +1,14 @@
-import type { Compilation, Compiler } from 'webpack'
+import type { Compilation } from 'webpack'
 import type { HtmlTagDescriptor } from 'vite'
-import type { RspackCompiler } from 'unplugin'
 import { getHTMLWebpackPlugin } from '../helper/getHTMLWebpackPlugin'
-import type { AssetsSet, Options } from '../types'
+import type { Options, UnpluginCompiler } from '../types'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
 import { serializeTags } from '../helper/serializer'
+import { getAssetsForWebpackOrRspack } from '../helper/getAssets'
 
 export function htmlWebpackPluginAdapter(args: {
   name: string
-  compiler: Compiler | RspackCompiler
+  compiler: UnpluginCompiler
   options: Options
   customInject: RegExp
 }) {
@@ -26,26 +26,8 @@ export function htmlWebpackPluginAdapter(args: {
     hooks.alterAssetTagGroups.tapAsync(
       name,
       (data, cb) => {
-        let outputs: string[] = []
-        const assets: AssetsSet = new Set()
-        let assetsInfo: Compilation['assetsInfo'] = new Map()
+        const assets = getAssetsForWebpackOrRspack(compilation)
 
-        // webpack
-        if (isWebpack) {
-          assetsInfo = compilation.assetsInfo
-          outputs = Array.from(compilation.assetsInfo.keys()).sort()
-        }
-        // rspack
-        else {
-          const assetsStats = compilation.getStats().toJson({ all: false, assets: true }).assets || []
-          assetsInfo = new Map(assetsStats.map(asset => [asset.name, asset.info]))
-          outputs = Array.from(assetsStats.map(asset => asset.name)).sort()
-        }
-
-        outputs.forEach((output) => {
-          const entry = assetsInfo.get(output)?.sourceFilename || ''
-          assets.add({ entry, output })
-        })
         tagsAttributes = getTagsAttributes(
           assets,
           options,

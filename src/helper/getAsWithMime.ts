@@ -1,4 +1,6 @@
-export function getAsWithMime(mime: string): RequestDestination | undefined {
+import type { UnpluginLogger } from '../types'
+
+export function getAsWithMime(mime: string, log: UnpluginLogger): RequestDestination | undefined {
   let destination = mime.split('/')[0] as RequestDestination
   const validDestinations: RequestDestination[] = [
     'audio',
@@ -32,9 +34,8 @@ export function getAsWithMime(mime: string): RequestDestination | undefined {
   if (validDestinations.includes(destination))
     return destination
 
-  console.warn(
-    '[unplugin-inject-preload]',
-    `No valid destinations for "${mime}". Define the 'as' attribute.`,
+  log.warn(
+    `[unplugin-inject-preload] No valid destinations for "${mime}". Define the 'as' attribute.`,
   )
   return undefined
 }
