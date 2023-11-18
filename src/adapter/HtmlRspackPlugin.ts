@@ -17,9 +17,12 @@ export function htmlRspackPluginAdapter(args: {
   compiler.hooks.emit.tapAsync(name, (compilation, callback) => {
     const pluginInstances = compilation.options.plugins.filter(plugin => plugin.name === 'HtmlRspackPlugin')
     if (!pluginInstances)
-      return
+      return callback()
 
     const filenames: string[] = pluginInstances.flatMap(item => '_options' in item ? [item._options.filename || 'index.html'] : [])
+    if (filenames.length === 0)
+      return callback()
+
     const logger = compilation.getLogger(name)
     const assets = getAssetsForWebpackOrRspack(compilation)
     const tags: HtmlTagDescriptor[] = []

@@ -5,6 +5,7 @@ import type { Options } from './types'
 import { htmlRspackPluginAdapter } from './adapter/HtmlRspackPlugin'
 import { htmlWebpackPluginAdapter } from './adapter/HtmlWebpackPlugin'
 import { viteAdapter } from './adapter/vite'
+import { checkPluginsDeps } from './helper/checkPluginsDeps'
 
 let viteBasePath: string
 let viteLogger: Logger
@@ -40,6 +41,8 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     },
   },
   webpack: (compiler) => {
+    checkPluginsDeps(name, compiler, ['HtmlWebpackPlugin'])
+
     htmlWebpackPluginAdapter({
       name,
       compiler,
@@ -47,6 +50,8 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
     })
   },
   rspack: (compiler) => {
+    checkPluginsDeps(name, compiler, ['HtmlWebpackPlugin', 'HtmlRspackPlugin'])
+
     const adapterObj = {
       name,
       compiler,

@@ -32,3 +32,4 @@ export type AssetsSet = Set<{ entry: string, output: string }>
 export type UnpluginCompilation = WebpackCompilation | RspackCompilation
 export type UnpluginCompiler = WebpackCompiler | RspackCompiler
 export type UnpluginLogger = Logger | WebpackCompilation['logger']
+export type PluginDeps = 'HtmlRspackPlugin' | 'HtmlWebpackPlugin'
