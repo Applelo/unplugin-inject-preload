@@ -1,16 +1,16 @@
 import { describe, expect, it, vi } from 'vitest'
-import { getHTMLWebpackPlugin } from '../src/helper/getHTMLWebpackPlugin'
+import { getHtmlWebpackPlugin } from '../src/helper/getHtmlWebpackPlugin'
 
-describe('excerpt get HTMLWebpackPlugin', () => {
-  it('get HTMLWebpackPlugin', async () => {
-    const HTMLWebpackPlugin = await getHTMLWebpackPlugin()
-    expect(HTMLWebpackPlugin).not.toBeNull()
+describe('excerpt get HtmlWebpackPlugin', () => {
+  it('get HtmlWebpackPlugin', async () => {
+    const HtmlWebpackPlugin = await getHtmlWebpackPlugin()
+    expect(HtmlWebpackPlugin).not.toBeNull()
   })
 
-  it('failed get HTMLWebpackPlugin', async () => {
+  it('failed get HtmlWebpackPlugin', async () => {
     vi.doMock('html-webpack-plugin', () => {})
     try {
-      await getHTMLWebpackPlugin()
+      await getHtmlWebpackPlugin()
     }
     catch (error) {
       expect(error).toBeDefined()

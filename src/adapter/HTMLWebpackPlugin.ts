@@ -1,6 +1,6 @@
 import type { Compilation } from 'webpack'
 import type { HtmlTagDescriptor } from 'vite'
-import { getHTMLWebpackPlugin } from '../helper/getHTMLWebpackPlugin'
+import { getHtmlWebpackPlugin } from '../helper/getHtmlWebpackPlugin'
 import type { Options, UnpluginCompiler } from '../types'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
 import { serializeTags } from '../helper/serializer'
@@ -16,11 +16,11 @@ export function htmlWebpackPluginAdapter(args: {
   compiler.hooks.compilation.tap(name, async (compilation) => {
     const isWebpack = 'assetsInfo' in compilation
     const logger = compilation.getLogger(name)
-    const HTMLWebpackPlugin = await getHTMLWebpackPlugin(isWebpack)
-    if (!HTMLWebpackPlugin)
+    const HtmlWebpackPlugin = await getHtmlWebpackPlugin(isWebpack)
+    if (!HtmlWebpackPlugin)
       return
 
-    const hooks = HTMLWebpackPlugin.default.getHooks(compilation as Compilation)
+    const hooks = HtmlWebpackPlugin.default.getHooks(compilation as Compilation)
     let tagsAttributes: any[] = []
 
     hooks.alterAssetTagGroups.tapAsync(
