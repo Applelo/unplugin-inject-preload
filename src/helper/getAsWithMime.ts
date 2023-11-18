@@ -1,6 +1,6 @@
 import type { UnpluginLogger } from '../types'
 
-export function getAsWithMime(mime: string, log: UnpluginLogger): RequestDestination | undefined {
+export function getAsWithMime(mime: string, log: UnpluginLogger | Console): RequestDestination | undefined {
   let destination = mime.split('/')[0] as RequestDestination
   const validDestinations: RequestDestination[] = [
     'audio',
