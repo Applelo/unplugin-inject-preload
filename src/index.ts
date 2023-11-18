@@ -3,7 +3,7 @@ import { createUnplugin } from 'unplugin'
 import type { IndexHtmlTransformContext, Logger } from 'vite'
 import type { Options } from './types'
 import { htmlRspackPluginAdapter } from './adapter/HtmlRspackPlugin'
-import { htmlWebpackPluginAdapter } from './adapter/HtmlWebpackPlugin'
+import { htmlWebpackPluginAdapter } from './adapter/HtmlWebpackPluginn'
 import { viteAdapter } from './adapter/vite'
 
 const customInject = /([ \t]*)<!--__unplugin-inject-preload__-->/i
