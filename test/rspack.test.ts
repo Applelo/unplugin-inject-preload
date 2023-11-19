@@ -2,20 +2,37 @@ import { join } from 'node:path'
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { Configuration } from '@rspack/core'
-import { rspack } from '@rspack/core'
+import { HtmlRspackPlugin, rspack } from '@rspack/core'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import UnpluginInjectPreload from './../src/rspack'
 import type { Options } from './../src/types'
 import configs from './fixtures/configs'
 
-async function buildRspack(pluginConfig: Options, config: Configuration = {}) {
+async function buildRspack(pluginConfig: Options, plugin: 'HtmlWebpackPlugin' | 'HtmlRspackPlugin', config: Configuration = {}) {
   return new Promise((resolve, reject) => {
+    let htmlPlugin: any = null
+
+    if (plugin === 'HtmlRspackPlugin') {
+      htmlPlugin = new HtmlRspackPlugin({
+        title: 'Unplugin Inject Preload',
+        minify: false,
+        template: join(__dirname, 'fixtures/rspack/htmlRspackPlugin.html'),
+      })
+    }
+    else {
+      htmlPlugin = new HtmlWebpackPlugin({
+        title: 'Unplugin Inject Preload',
+        minify: false,
+        template: join(__dirname, 'fixtures/rspack/htmlWebpackPlugin.html'),
+      })
+    }
+
     const compiler = rspack({
       mode: 'production',
-      context: join(__dirname, 'fixtures/webpack'),
+      context: join(__dirname, 'fixtures/rspack'),
       entry: join(__dirname, 'fixtures/src/main.ts'),
       output: {
-        path: join(__dirname, 'fixtures/webpack/dist'),
+        path: join(__dirname, 'fixtures/rspack/dist'),
         publicPath: config.output?.publicPath || '/',
         clean: true,
         assetModuleFilename: '[name]-[hash][ext][query]',
@@ -39,12 +56,7 @@ async function buildRspack(pluginConfig: Options, config: Configuration = {}) {
         ],
       },
       plugins: [
-        // @ts-expect-error work as expected
-        new HtmlWebpackPlugin({
-          minify: false,
-          inject: false,
-          template: join(__dirname, 'fixtures/webpack/index.html'),
-        }),
+        htmlPlugin,
         UnpluginInjectPreload(pluginConfig),
       ],
     })
@@ -60,7 +72,7 @@ async function buildRspack(pluginConfig: Options, config: Configuration = {}) {
       }
 
       const result = readFileSync(
-        join(__dirname, 'fixtures/webpack/dist/index.html'),
+        join(__dirname, 'fixtures/rspack/dist/index.html'),
         'utf8',
       )
 
@@ -69,17 +81,34 @@ async function buildRspack(pluginConfig: Options, config: Configuration = {}) {
   })
 }
 
-describe('excerpt rspack', () => {
+describe('excerpt rspack with HtmlWebpackPlugin', () => {
   for (const key in configs) {
     if (Object.prototype.hasOwnProperty.call(configs, key)) {
       const config = configs[key]
       it(`test ${key}`, async () => {
-        const output = await buildRspack(config)
+        const output = await buildRspack(config, 'HtmlWebpackPlugin')
         expect(output).toMatchSnapshot()
       }, 8000)
 
       it(`test ${key} with basePath`, async () => {
-        const output = await buildRspack(config, { output: { publicPath: '/base' } })
+        const output = await buildRspack(config, 'HtmlWebpackPlugin', { output: { publicPath: '/base' } })
+        expect(output).toMatchSnapshot()
+      }, 8000)
+    }
+  }
+})
+
+describe('excerpt rspack with HtmlRspackPlugin', () => {
+  for (const key in configs) {
+    if (Object.prototype.hasOwnProperty.call(configs, key)) {
+      const config = configs[key]
+      it(`test ${key}`, async () => {
+        const output = await buildRspack(config, 'HtmlRspackPlugin')
+        expect(output).toMatchSnapshot()
+      }, 8000)
+
+      it(`test ${key} with basePath`, async () => {
+        const output = await buildRspack(config, 'HtmlRspackPlugin', { output: { publicPath: '/base' } })
         expect(output).toMatchSnapshot()
       }, 8000)
     }

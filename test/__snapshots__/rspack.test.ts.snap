@@ -1,15 +1,339 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`excerpt rspack > test auto 1`] = `
+exports[`excerpt rspack with HtmlRspackPlugin > test auto 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test auto with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test customAttributes 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test customAttributes with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test customPosition 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+
+    <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+    <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+    <link rel=\\"preload\\" href=\\"src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
+    <link rel=\\"preload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test customPosition with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+
+    <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+    <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
+    <link rel=\\"preload\\" href=\\"src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
+    <link rel=\\"preload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test entryMatch 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" />  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+</head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test entryMatch with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" />  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+</head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test injectBottom 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" />  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+</head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test injectBottom with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" />  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
+  <link rel=\\"preload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+</head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test modulepreload 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"modulepreload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test modulepreload with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"modulepreload\\" href=\\"src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test noMatch 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test noMatch with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test noType 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" as=\\"font\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test noType with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"Roboto-Italic-e27e8afcee204b1846ee.woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" as=\\"font\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test wrongAttributes 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/main.js\\" defer></script><link href=\\"/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlRspackPlugin > test wrongAttributes with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+  <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
+
+    <meta charset=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src=\\"/base/main.js\\" defer></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`excerpt rspack with HtmlWebpackPlugin > test auto 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><link rel=\\"preload\\" href=\\"/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><link rel=\\"preload\\" href=\\"/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -18,16 +342,16 @@ exports[`excerpt rspack > test auto 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test auto with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test auto with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"/base/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><link rel=\\"preload\\" href=\\"/base/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"/base/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><link rel=\\"preload\\" href=\\"/base/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -36,16 +360,16 @@ exports[`excerpt rspack > test auto with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test customAttributes 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test customAttributes 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -54,16 +378,16 @@ exports[`excerpt rspack > test customAttributes 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test customAttributes with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test customAttributes with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" crossorigin=\\"anonymous\\" data-font=\\"Roboto\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -72,13 +396,13 @@ exports[`excerpt rspack > test customAttributes with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test customPosition 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test customPosition 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
 
     <link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
@@ -86,7 +410,7 @@ exports[`excerpt rspack > test customPosition 1`] = `
     <link rel=\\"preload\\" href=\\"/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
     <link rel=\\"preload\\" href=\\"/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
 
-  </head>
+  <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -95,13 +419,13 @@ exports[`excerpt rspack > test customPosition 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test customPosition with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test customPosition with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
 
     <link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\" data-vite-plugin-inject-preload>
@@ -109,7 +433,7 @@ exports[`excerpt rspack > test customPosition with basePath 1`] = `
     <link rel=\\"preload\\" href=\\"/base/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\">
     <link rel=\\"preload\\" href=\\"/base/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
 
-  </head>
+  <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -118,16 +442,16 @@ exports[`excerpt rspack > test customPosition with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test entryMatch 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test entryMatch 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -136,16 +460,16 @@ exports[`excerpt rspack > test entryMatch 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test entryMatch with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test entryMatch with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -154,16 +478,16 @@ exports[`excerpt rspack > test entryMatch with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test injectBottom 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test injectBottom 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -172,16 +496,16 @@ exports[`excerpt rspack > test injectBottom 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test injectBottom with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test injectBottom with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/base/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/src_lazy_ts.css\\" type=\\"text/css\\" as=\\"style\\"><link rel=\\"preload\\" href=\\"/base/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -190,16 +514,16 @@ exports[`excerpt rspack > test injectBottom with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test modulepreload 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test modulepreload 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"modulepreload\\" href=\\"/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"modulepreload\\" href=\\"/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -208,16 +532,16 @@ exports[`excerpt rspack > test modulepreload 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test modulepreload with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test modulepreload with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"modulepreload\\" href=\\"/base/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"modulepreload\\" href=\\"/base/src_lazy_ts.js\\" type=\\"application/javascript\\" as=\\"script\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -226,16 +550,16 @@ exports[`excerpt rspack > test modulepreload with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test noMatch 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test noMatch 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -244,16 +568,16 @@ exports[`excerpt rspack > test noMatch 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test noMatch with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test noMatch with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -262,16 +586,16 @@ exports[`excerpt rspack > test noMatch with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test noType 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test noType 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -280,16 +604,16 @@ exports[`excerpt rspack > test noType 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test noType with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test noType with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"/base/Roboto-Regular-0ada90f2c35bff5aade7.woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-e27e8afcee204b1846ee.woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -298,16 +622,16 @@ exports[`excerpt rspack > test noType with basePath 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test wrongAttributes 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test wrongAttributes 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/main.js\\"></script><link href=\\"/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -316,16 +640,16 @@ exports[`excerpt rspack > test wrongAttributes 1`] = `
 "
 `;
 
-exports[`excerpt rspack > test wrongAttributes with basePath 1`] = `
+exports[`excerpt rspack with HtmlWebpackPlugin > test wrongAttributes with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
     <meta charset=\\"utf-8\\"/>
     <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
+    <title>Unplugin Inject Preload</title>
     <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\">
     <!--__unplugin-inject-preload__-->
-  </head>
+  <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     

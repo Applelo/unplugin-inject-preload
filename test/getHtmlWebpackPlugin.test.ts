@@ -16,4 +16,10 @@ describe('excerpt get HtmlWebpackPlugin', () => {
       expect(error).toBeDefined()
     }
   })
+
+  it('failed get HtmlWebpackPlugin don\'t throw', async () => {
+    vi.doMock('html-webpack-plugin', () => {})
+    const result = await getHtmlWebpackPlugin(false)
+    expect(result).toBeFalsy()
+  })
 })
