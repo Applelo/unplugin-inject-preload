@@ -29,7 +29,7 @@ export function htmlRspackPluginAdapter(args: {
     const tagsAttributes = getTagsAttributes(
       assets,
       options,
-      '', // basePath
+      compilation.outputOptions.publicPath || '',
       logger,
     )
 

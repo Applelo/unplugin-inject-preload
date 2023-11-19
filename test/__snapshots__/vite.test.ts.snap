@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`excerpt vitejs > test auto 1`] = `
+exports[`expect vitejs > test auto 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -43,7 +43,7 @@ exports[`excerpt vitejs > test auto 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test auto with basePath 1`] = `
+exports[`expect vitejs > test auto with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -90,7 +90,7 @@ exports[`excerpt vitejs > test auto with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test customAttributes 1`] = `
+exports[`expect vitejs > test customAttributes 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -125,7 +125,7 @@ exports[`excerpt vitejs > test customAttributes 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test customAttributes with basePath 1`] = `
+exports[`expect vitejs > test customAttributes with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -164,7 +164,7 @@ exports[`excerpt vitejs > test customAttributes with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test customPosition 1`] = `
+exports[`expect vitejs > test customPosition 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -209,7 +209,7 @@ exports[`excerpt vitejs > test customPosition 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test customPosition with basePath 1`] = `
+exports[`expect vitejs > test customPosition with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -258,7 +258,7 @@ exports[`excerpt vitejs > test customPosition with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test entryMatch 1`] = `
+exports[`expect vitejs > test entryMatch 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -288,7 +288,7 @@ exports[`excerpt vitejs > test entryMatch 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test entryMatch with basePath 1`] = `
+exports[`expect vitejs > test entryMatch with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -322,7 +322,7 @@ exports[`excerpt vitejs > test entryMatch with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test injectBottom 1`] = `
+exports[`expect vitejs > test injectBottom 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -364,7 +364,7 @@ exports[`excerpt vitejs > test injectBottom 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test injectBottom with basePath 1`] = `
+exports[`expect vitejs > test injectBottom with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -410,7 +410,7 @@ exports[`excerpt vitejs > test injectBottom with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test modulepreload 1`] = `
+exports[`expect vitejs > test modulepreload 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -435,7 +435,7 @@ exports[`excerpt vitejs > test modulepreload 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test modulepreload with basePath 1`] = `
+exports[`expect vitejs > test modulepreload with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -464,7 +464,7 @@ exports[`excerpt vitejs > test modulepreload with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test noMatch 1`] = `
+exports[`expect vitejs > test noMatch 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -482,7 +482,7 @@ exports[`excerpt vitejs > test noMatch 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test noMatch with basePath 1`] = `
+exports[`expect vitejs > test noMatch with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -504,7 +504,7 @@ exports[`excerpt vitejs > test noMatch with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test noType 1`] = `
+exports[`expect vitejs > test noType 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -529,7 +529,7 @@ exports[`excerpt vitejs > test noType 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test noType with basePath 1`] = `
+exports[`expect vitejs > test noType with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -562,7 +562,7 @@ exports[`excerpt vitejs > test noType with basePath 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test wrongAttributes 1`] = `
+exports[`expect vitejs > test wrongAttributes 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>
@@ -583,7 +583,7 @@ exports[`excerpt vitejs > test wrongAttributes 1`] = `
 "
 `;
 
-exports[`excerpt vitejs > test wrongAttributes with basePath 1`] = `
+exports[`expect vitejs > test wrongAttributes with basePath 1`] = `
 "<!doctype html>
 <html lang=\\"en\\">
   <head>

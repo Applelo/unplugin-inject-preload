@@ -8,7 +8,7 @@ import UnpluginInjectPreload from './../src/rspack'
 import type { Options } from './../src/types'
 import configs from './fixtures/configs'
 
-async function buildRspack(pluginConfig: Options, plugin: 'HtmlWebpackPlugin' | 'HtmlRspackPlugin', config: Configuration = {}) {
+async function buildRspack(pluginConfig: Options, plugin: 'HtmlWebpackPlugin' | 'HtmlRspackPlugin' | 'none', config: Configuration = {}) {
   return new Promise((resolve, reject) => {
     let htmlPlugin: any = null
 
@@ -19,7 +19,7 @@ async function buildRspack(pluginConfig: Options, plugin: 'HtmlWebpackPlugin' | 
         template: join(__dirname, 'fixtures/rspack/htmlRspackPlugin.html'),
       })
     }
-    else {
+    else if (plugin === 'HtmlWebpackPlugin') {
       htmlPlugin = new HtmlWebpackPlugin({
         title: 'Unplugin Inject Preload',
         minify: false,
@@ -56,7 +56,7 @@ async function buildRspack(pluginConfig: Options, plugin: 'HtmlWebpackPlugin' | 
         ],
       },
       plugins: [
-        htmlPlugin,
+        ...(htmlPlugin ? [htmlPlugin] : []),
         UnpluginInjectPreload(pluginConfig),
       ],
     })
@@ -71,17 +71,21 @@ async function buildRspack(pluginConfig: Options, plugin: 'HtmlWebpackPlugin' | 
         reject(statsErrors)
       }
 
-      const result = readFileSync(
-        join(__dirname, 'fixtures/rspack/dist/index.html'),
-        'utf8',
-      )
-
-      resolve(result)
+      try {
+        const result = readFileSync(
+          join(__dirname, 'fixtures/rspack/dist/index.html'),
+          'utf8',
+        )
+        resolve(result)
+      }
+      catch (error) {
+        reject(error)
+      }
     })
   })
 }
 
-describe('excerpt rspack with HtmlWebpackPlugin', () => {
+describe('expect rspack with HtmlWebpackPlugin', () => {
   for (const key in configs) {
     if (Object.prototype.hasOwnProperty.call(configs, key)) {
       const config = configs[key]
@@ -98,7 +102,7 @@ describe('excerpt rspack with HtmlWebpackPlugin', () => {
   }
 })
 
-describe('excerpt rspack with HtmlRspackPlugin', () => {
+describe('expect rspack with HtmlRspackPlugin', () => {
   for (const key in configs) {
     if (Object.prototype.hasOwnProperty.call(configs, key)) {
       const config = configs[key]
@@ -113,4 +117,8 @@ describe('excerpt rspack with HtmlRspackPlugin', () => {
       }, 8000)
     }
   }
+})
+
+it('expect checkDeps to fail', async () => {
+  await expect(() => buildRspack(configs.auto, 'none')).rejects.toThrowError()
 })

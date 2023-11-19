@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { getHtmlWebpackPlugin } from '../src/helper/getHtmlWebpackPlugin'
 
-describe('excerpt get HtmlWebpackPlugin', () => {
+describe('expect get HtmlWebpackPlugin', () => {
   it('get HtmlWebpackPlugin', async () => {
     const HtmlWebpackPlugin = await getHtmlWebpackPlugin()
     expect(HtmlWebpackPlugin).not.toBeNull()

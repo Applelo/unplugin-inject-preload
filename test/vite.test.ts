@@ -21,7 +21,7 @@ async function buildVite(pluginConfig: Options, config: InlineConfig = {}) {
   return await format(indexSource.toString(), { parser: 'html' })
 }
 
-describe('excerpt vitejs', () => {
+describe('expect vitejs', () => {
   for (const key in configs) {
     if (Object.prototype.hasOwnProperty.call(configs, key)) {
       const config = configs[key]

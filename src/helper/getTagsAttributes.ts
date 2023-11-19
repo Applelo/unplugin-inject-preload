@@ -1,3 +1,4 @@
+import { join } from 'node:path'
 import type { HtmlTagDescriptor } from 'vite'
 import { lookup as mimeLookup } from 'mime-types'
 import type { AssetsSet, Options, UnpluginLogger } from '../types'
@@ -27,7 +28,7 @@ export function getTagsAttributes(
         continue
 
       const attrs: HtmlTagDescriptor['attrs'] = file.attributes || {}
-      const href = `${basePath}${asset.output}`
+      const href = join(basePath, asset.output)
       const type = attrs.type ? attrs.type : mimeLookup(asset.output)
       const as
         = typeof type === 'string' ? getAsWithMime(type, log) : undefined
