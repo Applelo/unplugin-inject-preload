@@ -3,6 +3,21 @@ import { lookup as mimeLookup } from 'mime-types'
 import type { AssetsSet, Options, UnpluginLogger } from '../types'
 import { getAsWithMime } from './getAsWithMime'
 
+function pathJoin(...strs: string[]) {
+  let path = ''
+  for (let index = 0; index < strs.length; index++) {
+    const str = strs[index]
+    const previousStr = index ? strs[index - 1] : ''
+
+    if (str && !str.startsWith('/') && !previousStr.endsWith('/'))
+      path += `/${str}`
+    else
+      path += str
+  }
+
+  return path
+}
+
 export function getTagsAttributes(
   assetsSet: AssetsSet,
   options: Options,
@@ -17,7 +32,7 @@ export function getTagsAttributes(
 
     for (let index = 0; index < options.files.length; index++) {
       const file = options.files[index]
-      if (!(file.entryMatch || file.outputMatch)) {
+      if (!file.entryMatch && !file.outputMatch) {
         log.warn('[unplugin-inject-preload] You should have at least one option between entryMatch and outputMatch.')
         continue
       }
@@ -27,10 +42,10 @@ export function getTagsAttributes(
         continue
 
       const attrs: HtmlTagDescriptor['attrs'] = file.attributes || {}
-      const href = `${basePath}${asset.output}`
+      const href = pathJoin(basePath, asset.output)
       const type = attrs.type ? attrs.type : mimeLookup(asset.output)
       const as
-        = typeof type === 'string' ? getAsWithMime(type) : undefined
+        = typeof type === 'string' ? getAsWithMime(type, log) : undefined
 
       const finalAttrs = Object.assign(
         {

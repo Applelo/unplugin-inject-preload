@@ -4,10 +4,10 @@ export default {
   injectBottom: {
     files: [
       {
-        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-zA-Z-0-9]*\.woff2$/,
       },
       {
-        outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
+        outputMatch: /lazy.[a-zA-Z-0-9]*.(css|js)$/,
       },
     ],
     injectTo: 'head',
@@ -15,7 +15,7 @@ export default {
   customAttributes: {
     files: [
       {
-        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-zA-Z-0-9]*\.woff2$/,
         attributes: {
           'as': 'font',
           'crossorigin': 'anonymous',
@@ -28,23 +28,23 @@ export default {
   auto: {
     files: [
       {
-        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-zA-Z-0-9]*\.woff2$/,
       },
       {
-        outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
+        outputMatch: /lazy.[a-zA-Z-0-9]*.(css|js)$/,
       },
     ],
   },
   customPosition: {
     files: [
       {
-        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-zA-Z-0-9]*\.woff2$/,
         attributes: {
           'data-vite-plugin-inject-preload': true,
         },
       },
       {
-        outputMatch: /lazy.[a-z-0-9]*.(css|js)$/,
+        outputMatch: /lazy.[a-zA-Z-0-9]*.(css|js)$/,
       },
     ],
     injectTo: 'custom',
@@ -52,7 +52,7 @@ export default {
   wrongAttributes: {
     files: [
       {
-        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-zA-Z-0-9]*\.woff2$/,
         attributes: {
           href: './yolo.woff2',
         },
@@ -62,7 +62,7 @@ export default {
   noType: {
     files: [
       {
-        outputMatch: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
+        outputMatch: /Roboto-[a-zA-Z]*-[a-zA-Z-0-9]*\.woff2$/,
         attributes: {
           type: undefined,
         },
@@ -72,7 +72,7 @@ export default {
   modulepreload: {
     files: [
       {
-        outputMatch: /lazy.[a-z-0-9]*.(js)$/,
+        outputMatch: /lazy.[a-zA-Z-0-9]*.(js)$/,
         attributes: {
           rel: 'modulepreload',
         },

@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "rspack serve",
+    "build": "rspack build"
+  },
+  "devDependencies": {
+    "@rspack/cli": "0.4.0",
+    "unplugin-inject-preload": "workspace:*"
+  }
+}

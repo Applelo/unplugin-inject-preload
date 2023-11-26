@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`excerpt webpack > test auto 1`] = `
+exports[`expect webpack > test auto 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +18,7 @@ exports[`excerpt webpack > test auto 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test auto with basePath 1`] = `
+exports[`expect webpack > test auto with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -36,7 +36,7 @@ exports[`excerpt webpack > test auto with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test customAttributes 1`] = `
+exports[`expect webpack > test customAttributes 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -54,7 +54,7 @@ exports[`excerpt webpack > test customAttributes 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test customAttributes with basePath 1`] = `
+exports[`expect webpack > test customAttributes with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -72,7 +72,7 @@ exports[`excerpt webpack > test customAttributes with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test customPosition 1`] = `
+exports[`expect webpack > test customPosition 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -93,7 +93,7 @@ exports[`excerpt webpack > test customPosition 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test customPosition with basePath 1`] = `
+exports[`expect webpack > test customPosition with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -114,7 +114,7 @@ exports[`excerpt webpack > test customPosition with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test entryMatch 1`] = `
+exports[`expect webpack > test entryMatch 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -132,7 +132,7 @@ exports[`excerpt webpack > test entryMatch 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test entryMatch with basePath 1`] = `
+exports[`expect webpack > test entryMatch with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -150,7 +150,7 @@ exports[`excerpt webpack > test entryMatch with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test injectBottom 1`] = `
+exports[`expect webpack > test injectBottom 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -168,7 +168,7 @@ exports[`excerpt webpack > test injectBottom 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test injectBottom with basePath 1`] = `
+exports[`expect webpack > test injectBottom with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -186,7 +186,7 @@ exports[`excerpt webpack > test injectBottom with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test modulepreload 1`] = `
+exports[`expect webpack > test modulepreload 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -204,7 +204,7 @@ exports[`excerpt webpack > test modulepreload 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test modulepreload with basePath 1`] = `
+exports[`expect webpack > test modulepreload with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -222,7 +222,7 @@ exports[`excerpt webpack > test modulepreload with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test noMatch 1`] = `
+exports[`expect webpack > test noMatch 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -240,7 +240,7 @@ exports[`excerpt webpack > test noMatch 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test noMatch with basePath 1`] = `
+exports[`expect webpack > test noMatch with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -258,7 +258,7 @@ exports[`excerpt webpack > test noMatch with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test noType 1`] = `
+exports[`expect webpack > test noType 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -276,7 +276,7 @@ exports[`excerpt webpack > test noType 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test noType with basePath 1`] = `
+exports[`expect webpack > test noType with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -294,7 +294,7 @@ exports[`excerpt webpack > test noType with basePath 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test wrongAttributes 1`] = `
+exports[`expect webpack > test wrongAttributes 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>
@@ -312,7 +312,7 @@ exports[`excerpt webpack > test wrongAttributes 1`] = `
 "
 `;
 
-exports[`excerpt webpack > test wrongAttributes with basePath 1`] = `
+exports[`expect webpack > test wrongAttributes with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
   <head>

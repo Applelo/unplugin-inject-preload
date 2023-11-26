@@ -5,14 +5,13 @@
 This plugin adds preload links by getting output assets from the build tools you are using.
 
 Supporting:
-- Vite 3 and 4 **(on build only)**
-- Webpack 5 (with HTMLWebpackPlugin 5)
-<!-- - Rspack -->
+- Vite 4 and 5 **(on build only)**
+- Webpack 5 (with [HtmlWebpackPlugin 5](https://github.com/jantimon/html-webpack-plugin))
+- Rspack (with [HtmlWebpackPlugin 5](https://github.com/jantimon/html-webpack-plugin) or [HtmlRspackPlugin](https://www.rspack.dev/config/plugins.html#htmlrspackplugin))
 
 > [!NOTE]
 > This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
-
-> [!NOTE]
+>
 > See the [migration guide](#migrate) for `vite-plugin-inject-preload` and `html-webpack-inject-preload` .
 
 ## Install
@@ -42,13 +41,12 @@ export default defineConfig({
 
 Example: [`playground/vitejs`](./playground/vitejs)
 
-> [!IMPORTANT]
 > The Vite plugin [only works on build](https://github.com/Applelo/vite-plugin-inject-preload/issues/15) because of the way Vite behave.
 
 <br></details>
 
 <details>
-<summary>Webpack (with HTMLWebpackPlugin)</summary><br>
+<summary>Webpack (with HtmlWebpackPlugin)</summary><br>
 
 ```ts
 // webpack.config.js
@@ -57,7 +55,7 @@ const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
 
 module.exports = {
   plugins: [
-    HtmlWebpackPlugin(),
+    HtmlWebpackPlugin({ /*  HtmlWebpackPlugin options */ }),
     UnpluginInjectPreload({ /* options */ }),
   ]
 }
@@ -67,7 +65,49 @@ Example: [`playground/webpack`](./playground/webpack)
 
 <br></details>
 
+<details>
+<summary>Rspack (with HtmlWebpackPlugin)</summary><br>
+
+```ts
+// rspack.config.js
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UnpluginInjectPreload = require('unplugin-inject-preload/rspack')
+
+module.exports = {
+  plugins: [
+    HtmlWebpackPlugin({ /*  HtmlWebpackPlugin options */ }),
+    UnpluginInjectPreload({ /* options */ }),
+  ]
+}
+```
+
+Example: [`playground/rspack`](./playground/rspack)
+
+<br></details>
+
+<details>
+<summary>Rspack (with HtmlRspackPlugin)</summary><br>
+
+```ts
+// rspack.config.js
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UnpluginInjectPreload = require('unplugin-inject-preload/rspack')
+
+module.exports = {
+  plugins: [
+    new rspack.HtmlRspackPlugin({ /* HtmlRspackPlugin options */ }),
+    UnpluginInjectPreload({ /* options */ }),
+  ]
+}
+```
+
+Example: [`playground/rspack`](./playground/rspack)
+
+<br></details>
+
 ## 👨‍💻 Usage
+
+> All example are presented for ViteJS but this is the same behavior for Webpack and RsPack
 
 All the files needs to be process by the bundler to be find by the plugin. For example, if I load this CSS file :
 
@@ -165,7 +205,7 @@ export default {
 {
   "devDependencies": {
 -   "vite-plugin-inject-preload": "*",
-+   "unplugin-inject-preload": "^1.1.0",
++   "unplugin-inject-preload": "^2.0.0",
   }
 }
 ```
@@ -205,7 +245,7 @@ export default {
 {
   "devDependencies": {
 -   "@principalstudio/html-webpack-inject-preload": "*",
-+   "unplugin-inject-preload": "^1.1.0",
++   "unplugin-inject-preload": "^2.0.0",
   }
 }
 ```

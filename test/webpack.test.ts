@@ -9,8 +9,15 @@ import UnpluginInjectPreload from './../src/webpack'
 import type { Options } from './../src/types'
 import configs from './fixtures/configs'
 
-async function buildWebpack(pluginConfig: Options, config: Configuration = {}) {
+async function buildWebpack(pluginConfig: Options, plugin = true, config: Configuration = {}) {
   return new Promise((resolve, reject) => {
+    const htmlPlugin = plugin
+      ? [new HtmlWebpackPlugin({
+          minify: false,
+          inject: false,
+          template: join(__dirname, 'fixtures/webpack/index.html'),
+        })]
+      : []
     const compiler = webpack({
       mode: 'production',
       context: join(__dirname, 'fixtures/webpack'),
@@ -46,11 +53,7 @@ async function buildWebpack(pluginConfig: Options, config: Configuration = {}) {
       },
       plugins: [
         new MiniCssExtractPlugin(),
-        new HtmlWebpackPlugin({
-          minify: false,
-          inject: false,
-          template: join(__dirname, 'fixtures/webpack/index.html'),
-        }),
+        ...htmlPlugin,
         UnpluginInjectPreload(pluginConfig),
       ],
     })
@@ -75,7 +78,7 @@ async function buildWebpack(pluginConfig: Options, config: Configuration = {}) {
   })
 }
 
-describe('excerpt webpack', () => {
+describe('expect webpack', () => {
   for (const key in configs) {
     if (Object.prototype.hasOwnProperty.call(configs, key)) {
       const config = configs[key]
@@ -85,9 +88,13 @@ describe('excerpt webpack', () => {
       }, 8000)
 
       it(`test ${key} with basePath`, async () => {
-        const output = await buildWebpack(config, { output: { publicPath: '/base' } })
+        const output = await buildWebpack(config, true, { output: { publicPath: '/base' } })
         expect(output).toMatchSnapshot()
       }, 8000)
     }
   }
+})
+
+it.skip('expect checkDeps to fail', async () => {
+  await expect(() => buildWebpack(configs.auto, false)).rejects.toThrowError()
 })

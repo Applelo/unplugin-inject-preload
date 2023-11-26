@@ -1,5 +1,6 @@
 import type { HtmlTagDescriptor, Logger } from 'vite'
-import type { Compilation } from 'webpack'
+import type { Compilation as WebpackCompilation, Compiler as WebpackCompiler } from 'webpack'
+import type { Compilation as RspackCompilation, Compiler as RspackCompiler } from '@rspack/core'
 
 export interface OptionsFiles {
   /**
@@ -27,5 +28,8 @@ export interface Options {
   injectTo?: 'head' | 'head-prepend' | 'custom'
 }
 
-export type AssetsSet = Set<{ entry: string; output: string }>
-export type UnpluginLogger = Logger | Compilation['logger']
+export type AssetsSet = Set<{ entry: string, output: string }>
+export type UnpluginCompilation = WebpackCompilation | RspackCompilation
+export type UnpluginCompiler = WebpackCompiler | RspackCompiler
+export type UnpluginLogger = Logger | WebpackCompilation['logger']
+export type PluginDeps = 'HtmlRspackPlugin' | 'HtmlWebpackPlugin'
