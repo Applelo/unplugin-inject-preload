@@ -7,7 +7,7 @@ function pathJoin(...strs: string[]) {
   let path = ''
   for (let index = 0; index < strs.length; index++) {
     const str = strs[index]
-    const previousStr = index ? strs[index - 1] : '/'
+    const previousStr = index ? strs[index - 1] : ''
 
     if (str && !str.startsWith('/') && !previousStr.endsWith('/'))
       path += `/${str}`

@@ -2,6 +2,7 @@ import { resolve } from 'node:path'
 import type { OutputAsset, RollupOutput } from 'rollup'
 import { type InlineConfig, build } from 'vite'
 import { describe, expect, it } from 'vitest'
+import { format } from 'prettier'
 import UnpluginInjectPreload from './../src/vite'
 import type { Options } from './../src/types'
 import configs from './fixtures/configs'
@@ -17,7 +18,7 @@ async function buildVite(pluginConfig: Options, config: InlineConfig = {}) {
     item => item.fileName === 'index.html',
   ) as OutputAsset
 
-  return indexSource.toString()
+  return await format(indexSource.toString(), { parser: 'html' })
 }
 
 describe('expect vitejs', () => {
