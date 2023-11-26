@@ -186,24 +186,6 @@ exports[`expect webpack > test injectBottom with basePath 1`] = `
 "
 `;
 
-exports[`expect webpack > test injectBottom with basePath 2`] = `
-"<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset=\\"utf-8\\"/>
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
-    <title>Webpack App</title>
-    <script defer src=\\"/base/main.js\\"></script><link href=\\"/base/main.css\\" rel=\\"stylesheet\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Italic-96e486355f319e0b182b.woff2\\" type=\\"font/woff2\\" as=\\"font\\"><link rel=\\"preload\\" href=\\"/base/Roboto-Regular-ec5068bd8823a38af494.woff2\\" type=\\"font/woff2\\" as=\\"font\\">
-    <!--__unplugin-inject-preload__-->
-  </head>
-  <body>
-    <h1>Unplugin Inject Preload</h1>
-    
-  </body>
-</html>
-"
-`;
-
 exports[`expect webpack > test modulepreload 1`] = `
 "<!DOCTYPE html>
 <html>
