@@ -1,10 +1,12 @@
 import type { Compiler } from '@rspack/core/dist/Compiler'
-import { RawSource } from 'webpack-sources'
+import pkgWebpackSources from 'webpack-sources'
 import type { HtmlTagDescriptor } from 'vite'
 import type { Options } from '../types'
 import { getAssetsForWebpackOrRspack } from '../helper/getAssets'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
 import { injectToCustom, injectToHead } from '../helper/html'
+
+const { RawSource } = pkgWebpackSources
 
 export function htmlRspackPluginAdapter(args: {
   name: string
