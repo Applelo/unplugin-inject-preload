@@ -4,6 +4,7 @@ export default defineConfig({
   test: {
     coverage: {
       reporter: ['lcov'],
+      include: ['src/*'],
     },
   },
 })
