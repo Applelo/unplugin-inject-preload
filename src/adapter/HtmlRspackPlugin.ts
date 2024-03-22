@@ -17,11 +17,11 @@ export function htmlRspackPluginAdapter(args: {
   const injectTo = options.injectTo || 'head-prepend'
 
   compiler.hooks.emit.tapAsync(name, (compilation, callback) => {
-    const pluginInstances = compilation.options.plugins.filter(plugin => plugin.name === 'HtmlRspackPlugin')
+    const pluginInstances = compilation.options.plugins.filter(plugin => plugin && plugin.name === 'HtmlRspackPlugin')
     if (!pluginInstances)
       return callback()
 
-    const filenames: string[] = pluginInstances.flatMap(item => '_options' in item ? [item._options.filename || 'index.html'] : [])
+    const filenames: string[] = pluginInstances.flatMap(item => item && '_options' in item ? [item._options.filename || 'index.html'] : [])
     if (filenames.length === 0)
       return callback()
 

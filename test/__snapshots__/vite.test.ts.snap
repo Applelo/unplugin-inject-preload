@@ -2,39 +2,33 @@
 
 exports[`expect vitejs > test auto 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/lazy-Xv0x6Hd7.css\\"
-      type=\\"text/css\\"
-      as=\\"style\\"
-    />
-    <link
-      rel=\\"preload\\"
-      href=\\"/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="preload"
+      href="/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -45,43 +39,37 @@ exports[`expect vitejs > test auto 1`] = `
 
 exports[`expect vitejs > test auto with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/lazy-Xv0x6Hd7.css\\"
-      type=\\"text/css\\"
-      as=\\"style\\"
-    />
-    <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="preload"
+      href="/base/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -92,31 +80,31 @@ exports[`expect vitejs > test auto with basePath 1`] = `
 
 exports[`expect vitejs > test customAttributes 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
-      crossorigin=\\"anonymous\\"
-      data-font=\\"Roboto\\"
+      rel="preload"
+      href="/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+      data-font="Roboto"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
-      crossorigin=\\"anonymous\\"
-      data-font=\\"Roboto\\"
+      rel="preload"
+      href="/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+      data-font="Roboto"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -127,35 +115,35 @@ exports[`expect vitejs > test customAttributes 1`] = `
 
 exports[`expect vitejs > test customAttributes with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
-      crossorigin=\\"anonymous\\"
-      data-font=\\"Roboto\\"
+      rel="preload"
+      href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+      data-font="Roboto"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
-      crossorigin=\\"anonymous\\"
-      data-font=\\"Roboto\\"
+      rel="preload"
+      href="/base/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+      data-font="Roboto"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -166,41 +154,35 @@ exports[`expect vitejs > test customAttributes with basePath 1`] = `
 
 exports[`expect vitejs > test customPosition 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
 
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
       data-vite-plugin-inject-preload
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
       data-vite-plugin-inject-preload
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/lazy-Xv0x6Hd7.css\\"
-      type=\\"text/css\\"
-      as=\\"style\\"
-    />
-    <link
-      rel=\\"preload\\"
-      href=\\"/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="preload"
+      href="/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
 
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -211,45 +193,39 @@ exports[`expect vitejs > test customPosition 1`] = `
 
 exports[`expect vitejs > test customPosition with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
 
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
       data-vite-plugin-inject-preload
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
       data-vite-plugin-inject-preload
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/lazy-Xv0x6Hd7.css\\"
-      type=\\"text/css\\"
-      as=\\"style\\"
-    />
-    <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="preload"
+      href="/base/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
 
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -260,25 +236,25 @@ exports[`expect vitejs > test customPosition with basePath 1`] = `
 
 exports[`expect vitejs > test entryMatch 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
     />
   </head>
   <body>
@@ -290,29 +266,29 @@ exports[`expect vitejs > test entryMatch 1`] = `
 
 exports[`expect vitejs > test entryMatch with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
     />
   </head>
   <body>
@@ -324,37 +300,31 @@ exports[`expect vitejs > test entryMatch with basePath 1`] = `
 
 exports[`expect vitejs > test injectBottom 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/lazy-Xv0x6Hd7.css\\"
-      type=\\"text/css\\"
-      as=\\"style\\"
-    />
-    <link
-      rel=\\"preload\\"
-      href=\\"/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="preload"
+      href="/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
   </head>
   <body>
@@ -366,41 +336,35 @@ exports[`expect vitejs > test injectBottom 1`] = `
 
 exports[`expect vitejs > test injectBottom with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      type=\\"font/woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Regular-ZlapIrEx.woff2"
+      type="font/woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/lazy-Xv0x6Hd7.css\\"
-      type=\\"text/css\\"
-      as=\\"style\\"
-    />
-    <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="preload"
+      href="/base/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
   </head>
   <body>
@@ -412,21 +376,21 @@ exports[`expect vitejs > test injectBottom with basePath 1`] = `
 
 exports[`expect vitejs > test modulepreload 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
     <link
-      rel=\\"modulepreload\\"
-      href=\\"/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="modulepreload"
+      href="/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -437,25 +401,25 @@ exports[`expect vitejs > test modulepreload 1`] = `
 
 exports[`expect vitejs > test modulepreload with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
     <link
-      rel=\\"modulepreload\\"
-      href=\\"/base/assets/lazy-aIAJyh1f.js\\"
-      type=\\"application/javascript\\"
-      as=\\"script\\"
+      rel="modulepreload"
+      href="/base/assets/lazy-BMgJfzmm.js"
+      type="application/javascript"
+      as="script"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -466,14 +430,14 @@ exports[`expect vitejs > test modulepreload with basePath 1`] = `
 
 exports[`expect vitejs > test noMatch 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -484,18 +448,18 @@ exports[`expect vitejs > test noMatch 1`] = `
 
 exports[`expect vitejs > test noMatch with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -506,21 +470,21 @@ exports[`expect vitejs > test noMatch with basePath 1`] = `
 
 exports[`expect vitejs > test noType 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <link rel=\\"preload\\" href=\\"/assets/Roboto-Italic-uGizTT0d.woff2\\" as=\\"font\\" />
+    <link rel="preload" href="/assets/Roboto-Italic-C4aLNNPR.woff2" as="font" />
     <link
-      rel=\\"preload\\"
-      href=\\"/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/assets/Roboto-Regular-ZlapIrEx.woff2"
+      as="font"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -531,29 +495,29 @@ exports[`expect vitejs > test noType 1`] = `
 
 exports[`expect vitejs > test noType with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Italic-uGizTT0d.woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
+      as="font"
     />
     <link
-      rel=\\"preload\\"
-      href=\\"/base/assets/Roboto-Regular-GZWqSKxM.woff2\\"
-      as=\\"font\\"
+      rel="preload"
+      href="/base/assets/Roboto-Regular-ZlapIrEx.woff2"
+      as="font"
     />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -564,17 +528,17 @@ exports[`expect vitejs > test noType with basePath 1`] = `
 
 exports[`expect vitejs > test wrongAttributes 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\" />
-    <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\" />
+    <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
+    <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type=\\"module\\" crossorigin src=\\"/assets/index-0uSsLeVs.js\\"></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/assets/index-SOktfp5q.css\\" />
+    <script type="module" crossorigin src="/assets/index-Dbf-6TCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -585,21 +549,21 @@ exports[`expect vitejs > test wrongAttributes 1`] = `
 
 exports[`expect vitejs > test wrongAttributes with basePath 1`] = `
 "<!doctype html>
-<html lang=\\"en\\">
+<html lang="en">
   <head>
-    <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\" />
-    <link rel=\\"preload\\" href=\\"./yolo.woff2\\" type=\\"font/woff2\\" as=\\"font\\" />
+    <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
+    <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
 
-    <meta charset=\\"UTF-8\\" />
-    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
     <script
-      type=\\"module\\"
+      type="module"
       crossorigin
-      src=\\"/base/assets/index-kd0ICaHL.js\\"
+      src="/base/assets/index-C0NrOB6i.js"
     ></script>
-    <link rel=\\"stylesheet\\" crossorigin href=\\"/base/assets/index-8eDvJgbl.css\\" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
