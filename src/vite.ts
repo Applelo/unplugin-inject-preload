@@ -1,4 +1,24 @@
-import { createVitePlugin } from 'unplugin'
-import { unpluginFactory } from '.'
+/**
+ * This entry file is for Vite plugin.
+ *
+ * @module
+ */
 
-export default createVitePlugin(unpluginFactory)
+import unplugin from './index'
+
+/**
+ * Vite plugin
+ *
+ * @example
+ * ```ts
+ * // vite.config.ts
+ * import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
+ *
+ * export default defineConfig({
+ *   plugins: [
+ *     UnpluginInjectPreload({ your_options }),
+ *   ],
+ * })
+ * ```
+ */
+export default unplugin.vite

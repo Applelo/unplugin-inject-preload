@@ -1,8 +1,8 @@
 {
   "name": "unplugin-inject-preload",
   "type": "module",
-  "version": "2.0.1",
-  "packageManager": "pnpm@8.11.0",
+  "version": "2.0.2",
+  "packageManager": "pnpm@8.15.5",
   "description": "Inject <link rel='preload'> for Webpack/ViteJS",
   "license": "MIT",
   "homepage": "https://github.com/applelo/unplugin-inject-preload#readme",
@@ -72,7 +72,6 @@
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
-    "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit --skipLibCheck",
