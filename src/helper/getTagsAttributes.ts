@@ -1,22 +1,8 @@
+import { resolve } from 'node:path/posix'
 import type { HtmlTagDescriptor } from 'vite'
 import { lookup as mimeLookup } from 'mime-types'
 import type { AssetsSet, Options, UnpluginLogger } from '../types'
 import { getAsWithMime } from './getAsWithMime'
-
-function pathJoin(...strs: string[]) {
-  let path = ''
-  for (let index = 0; index < strs.length; index++) {
-    const str = strs[index]
-    const previousStr = index ? strs[index - 1] : ''
-
-    if (str && !str.startsWith('/') && !previousStr.endsWith('/'))
-      path += `/${str}`
-    else
-      path += str
-  }
-
-  return path
-}
 
 export function getTagsAttributes(
   assetsSet: AssetsSet,
@@ -42,7 +28,7 @@ export function getTagsAttributes(
         continue
 
       const attrs: HtmlTagDescriptor['attrs'] = file.attributes || {}
-      const href = pathJoin(basePath, asset.output)
+      const href = resolve(basePath, asset.output)
       const type = attrs.type ? attrs.type : mimeLookup(asset.output)
       const as
         = typeof type === 'string' ? getAsWithMime(type, log) : undefined
