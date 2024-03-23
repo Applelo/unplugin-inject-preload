@@ -1,4 +1,4 @@
-import type { UnpluginFactory } from 'unplugin'
+import type { UnpluginFactory, UnpluginInstance } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 import type { IndexHtmlTransformContext, Logger } from 'vite'
 import type { Options } from './types'
@@ -62,6 +62,6 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
   },
 })
 
-export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+export const unplugin: UnpluginInstance<Options, boolean> = createUnplugin(unpluginFactory)
 
 export default unplugin
