@@ -176,6 +176,36 @@ exports[`expect rspack with HtmlRspackPlugin > test injectBottom with basePath 1
 </body></html>"
 `;
 
+exports[`expect rspack with HtmlRspackPlugin > test issue9 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src="/main.js" defer></script><link href="/main.css" rel="stylesheet" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
+exports[`expect rspack with HtmlRspackPlugin > test issue9 with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--__unplugin-inject-preload__-->
+  <title>Unplugin Inject Preload</title><script src="/base/main.js" defer></script><link href="/base/main.css" rel="stylesheet" /></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+  
+
+</body></html>"
+`;
+
 exports[`expect rspack with HtmlRspackPlugin > test modulepreload 1`] = `
 "<!DOCTYPE html>
 <html>
@@ -486,6 +516,42 @@ exports[`expect rspack with HtmlWebpackPlugin > test injectBottom with basePath 
     <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
     <!--__unplugin-inject-preload__-->
   <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`expect rspack with HtmlWebpackPlugin > test issue9 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unplugin Inject Preload</title>
+    <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
+    <!--__unplugin-inject-preload__-->
+  <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <body>
+    <h1>Unplugin Inject Preload</h1>
+    
+  </body>
+</html>
+"
+`;
+
+exports[`expect rspack with HtmlWebpackPlugin > test issue9 with basePath 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unplugin Inject Preload</title>
+    <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
+    <!--__unplugin-inject-preload__-->
+  <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
