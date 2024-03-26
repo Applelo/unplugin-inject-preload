@@ -1,7 +1,7 @@
 {
   "name": "unplugin-inject-preload",
   "type": "module",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "packageManager": "pnpm@8.15.5",
   "description": "Inject <link rel='preload'> for Webpack/ViteJS",
   "license": "MIT",
@@ -93,8 +93,8 @@
     "webpack-sources": "^3.2.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.9.0",
-    "@rspack/core": "^0.5.8",
+    "@antfu/eslint-config": "2.10.0",
+    "@rspack/core": "^0.5.9",
     "@types/mime-types": "^2.1.4",
     "@types/node": "^20.11.30",
     "@types/webpack-sources": "^3.2.3",
@@ -109,7 +109,7 @@
     "tsup": "^8.0.2",
     "tsx": "^4.7.1",
     "typescript": "^5.4.3",
-    "vite": "^5.2.4",
+    "vite": "^5.2.6",
     "vitest": "^1.4.0",
     "webpack": "^5.91.0"
   }

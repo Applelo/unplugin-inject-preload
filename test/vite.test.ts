@@ -30,8 +30,19 @@ describe('expect vitejs', () => {
         expect(output).toMatchSnapshot()
       })
 
-      it.concurrent(`test ${key} with basePath`, async () => {
+      it(`test ${key} with basePath`, async () => {
         const output = await buildVite(config, { base: '/base' })
+        expect(output).toMatchSnapshot()
+      })
+
+      // @see https://github.com/Applelo/unplugin-inject-preload/issues/9
+      it(`test ${key} with relative basePath `, async () => {
+        const output = await buildVite(config, { base: './' })
+        expect(output).toMatchSnapshot()
+      })
+
+      it(`test ${key} with URL basePath `, async () => {
+        const output = await buildVite(config, { base: 'https://github.com/' })
         expect(output).toMatchSnapshot()
       })
     }
