@@ -1,3 +1,8 @@
+/**
+ * This entry file is for main unplugin.
+ * @module
+ */
+
 import type { UnpluginFactory, UnpluginInstance } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 import type { IndexHtmlTransformContext, Logger } from 'vite'
@@ -62,6 +67,6 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
   },
 })
 
-export const unplugin: UnpluginInstance<Options, boolean> = createUnplugin(unpluginFactory)
+const unplugin: UnpluginInstance<Options, boolean> = createUnplugin(unpluginFactory)
 
 export default unplugin
