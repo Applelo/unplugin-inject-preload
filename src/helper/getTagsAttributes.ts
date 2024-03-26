@@ -29,8 +29,8 @@ export function getTagsAttributes(
         continue
 
       const attrs: HtmlTagDescriptor['attrs'] = file.attributes || {}
-      let href
-      if (basePath.indexOf("://") > 0) {
+      let href: string = ''
+      if (basePath.indexOf('://') > 0) {
         href = urlresolve(basePath, asset.output)
       } else {
         href = resolve(basePath, asset.output)
