@@ -1,4 +1,5 @@
 import { resolve } from 'node:path/posix'
+import { resolve as urlresolve } from 'node:url'
 import type { HtmlTagDescriptor } from 'vite'
 import { lookup as mimeLookup } from 'mime-types'
 import type { AssetsSet, Options, UnpluginLogger } from '../types'
@@ -28,7 +29,12 @@ export function getTagsAttributes(
         continue
 
       const attrs: HtmlTagDescriptor['attrs'] = file.attributes || {}
-      const href = resolve(basePath, asset.output)
+      let href
+      if (basePath.indexOf("://") > 0) {
+        href = urlresolve(basePath, asset.output)
+      } else {
+        href = resolve(basePath, asset.output)
+      }
       const type = attrs.type ? attrs.type : mimeLookup(asset.output)
       const as
         = typeof type === 'string' ? getAsWithMime(type, log) : undefined
