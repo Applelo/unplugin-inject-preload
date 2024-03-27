@@ -16,7 +16,10 @@ let viteBasePath: string
 let viteLogger: Logger
 const name = 'unplugin-inject-preload'
 
-export const unpluginFactory: UnpluginFactory<Options> = options => ({
+/**
+ * The main unplugin factory.
+ */
+const unpluginFactory: UnpluginFactory<Options> = options => ({
   name,
   vite: {
     apply: 'build',
@@ -67,6 +70,9 @@ export const unpluginFactory: UnpluginFactory<Options> = options => ({
   },
 })
 
+/**
+ * The unplugin instance.
+ */
 const unplugin: UnpluginInstance<Options, boolean> = createUnplugin(unpluginFactory)
 
 export default unplugin

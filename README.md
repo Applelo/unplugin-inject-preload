@@ -1,6 +1,6 @@
 # unplugin-inject-preload
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-inject-preload?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-inject-preload) [![node-current](https://img.shields.io/node/v/unplugin-inject-preload)](https://nodejs.org/) [![jsr](https://img.shields.io/endpoint?url=https%3A%2F%2Fjsr-api.sxzz.moe%2Fbadge%2F%40applelo%2Funplugin-inject-preload)](https://jsr.io/@applelo/unplugin-inject-preload) [![Coverage Status](https://coveralls.io/repos/github/Applelo/unplugin-inject-preload/badge.svg?branch=main)](https://coveralls.io/github/Applelo/unplugin-inject-preload?branch=main)
+![NPM Version](https://img.shields.io/npm/v/unplugin-inject-preload) [![jsr](https://img.shields.io/endpoint?url=https%3A%2F%2Fjsr-api.sxzz.moe%2Fbadge%2F%40applelo%2Funplugin-inject-preload)](https://jsr.io/@applelo/unplugin-inject-preload) [![node-current](https://img.shields.io/node/v/unplugin-inject-preload)](https://nodejs.org/) [![Coverage Status](https://coveralls.io/repos/github/Applelo/unplugin-inject-preload/badge.svg?branch=main)](https://coveralls.io/github/Applelo/unplugin-inject-preload?branch=main)
 
 This plugin adds preload links by getting output assets from the build tools you are using.
 
@@ -12,7 +12,7 @@ Supporting:
 > [!NOTE]
 > This plugin combines [vite-plugin-inject-preload](https://github.com/Applelo/vite-plugin-inject-preload) and [html-webpack-inject-preload](https://github.com/principalstudio/html-webpack-inject-preload) into one package.
 >
-> See the [migration guide](#migrate) for `vite-plugin-inject-preload` and `html-webpack-inject-preload` .
+> See the [migration guide](#migration) for `vite-plugin-inject-preload` and `html-webpack-inject-preload` .
 
 ## Install
 
