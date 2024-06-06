@@ -34,8 +34,14 @@ jobs:
         with:
           version: 7
 
+      - name: Install pnpm (node 16, pnpm 8)
+        if: matrix.node_version == 16
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Install pnpm
-        if: matrix.node_version != 14
+        if: matrix.node_version > 16
         uses: pnpm/action-setup@v3
 
       - name: Use Node.js ${{ matrix.node-version }}
@@ -62,7 +68,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
 
       - name: Set node version to 20
         uses: actions/setup-node@v4
@@ -93,7 +99,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
 
       - name: Set node version to 20
         uses: actions/setup-node@v4
