@@ -218,7 +218,8 @@ export default {
 
 export default {
   plugins: [
-    VitePluginInjectPreload({
+-   VitePluginInjectPreload({
++   UnpluginInjectPreload({
       files: [
         {
 -         match: /Roboto-[a-zA-Z]*-[a-z-0-9]*\.woff2$/,
