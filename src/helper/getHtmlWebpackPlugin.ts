@@ -3,7 +3,7 @@ export async function getHtmlWebpackPlugin(throwError = true) {
     const HtmlWebpackPlugin = await import('html-webpack-plugin')
     return HtmlWebpackPlugin
   }
-  catch (error) {
+  catch {
     if (throwError) {
       throw new Error(
         'unplugin-inject-preload needs to be used with HtmlWebpackPlugin',

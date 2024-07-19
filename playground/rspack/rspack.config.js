@@ -60,7 +60,7 @@ const config = {
       injectTo: 'custom',
       files: [
         {
-          outputMatch: /Roboto-[a-zA-Z]*.[a-z-0-9]*\.woff2$/,
+          outputMatch: /Roboto-(?:[^\n\rA-Za-z\u2028\u2029][-\da-z]*|[A-Za-z]+(?:[^\n\rA-Za-z\u2028\u2029][-\da-z]*)?)\.woff2$/,
         },
         {
           outputMatch: /^(?!main).*\.(css|js)$/,
