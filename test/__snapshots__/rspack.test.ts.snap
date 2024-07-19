@@ -4,8 +4,8 @@ exports[`expect rspack with HtmlRspackPlugin > test auto 1`] = `
 "<!DOCTYPE html>
 <html>
 <head>
-  <link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,8 +22,8 @@ exports[`expect rspack with HtmlRspackPlugin > test auto with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
 <head>
-  <link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,8 +40,8 @@ exports[`expect rspack with HtmlRspackPlugin > test customAttributes 1`] = `
 "<!DOCTYPE html>
 <html>
 <head>
-  <link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
+  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,8 +58,8 @@ exports[`expect rspack with HtmlRspackPlugin > test customAttributes with basePa
 "<!DOCTYPE html>
 <html>
 <head>
-  <link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
+  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,8 +79,8 @@ exports[`expect rspack with HtmlRspackPlugin > test customPosition 1`] = `
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
-    <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
 
   <title>Unplugin Inject Preload</title><script src="/main.js" defer></script><link href="/main.css" rel="stylesheet" /></head>
   <body>
@@ -97,8 +97,8 @@ exports[`expect rspack with HtmlRspackPlugin > test customPosition with basePath
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
-    <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
 
   <title>Unplugin Inject Preload</title><script src="/base/main.js" defer></script><link href="/base/main.css" rel="stylesheet" /></head>
   <body>
@@ -115,8 +115,8 @@ exports[`expect rspack with HtmlRspackPlugin > test entryMatch 1`] = `
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script src="/main.js" defer></script><link href="/main.css" rel="stylesheet" />  <link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+  <title>Unplugin Inject Preload</title><script src="/main.js" defer></script><link href="/main.css" rel="stylesheet" />  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -132,8 +132,8 @@ exports[`expect rspack with HtmlRspackPlugin > test entryMatch with basePath 1`]
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script src="/base/main.js" defer></script><link href="/base/main.css" rel="stylesheet" />  <link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+  <title>Unplugin Inject Preload</title><script src="/base/main.js" defer></script><link href="/base/main.css" rel="stylesheet" />  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -149,8 +149,8 @@ exports[`expect rspack with HtmlRspackPlugin > test injectBottom 1`] = `
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script src="/main.js" defer></script><link href="/main.css" rel="stylesheet" />  <link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+  <title>Unplugin Inject Preload</title><script src="/main.js" defer></script><link href="/main.css" rel="stylesheet" />  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -166,8 +166,8 @@ exports[`expect rspack with HtmlRspackPlugin > test injectBottom with basePath 1
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script src="/base/main.js" defer></script><link href="/base/main.css" rel="stylesheet" />  <link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+  <title>Unplugin Inject Preload</title><script src="/base/main.js" defer></script><link href="/base/main.css" rel="stylesheet" />  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -240,8 +240,8 @@ exports[`expect rspack with HtmlRspackPlugin > test noType 1`] = `
 "<!DOCTYPE html>
 <html>
 <head>
-  <link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" as="font">
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" as="font">
+  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" as="font">
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" as="font">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -258,8 +258,8 @@ exports[`expect rspack with HtmlRspackPlugin > test noType with basePath 1`] = `
 "<!DOCTYPE html>
 <html>
 <head>
-  <link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" as="font">
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" as="font">
+  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" as="font">
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" as="font">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -315,9 +315,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test auto 1`] = `
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
+    <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
     <!--__unplugin-inject-preload__-->
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -333,9 +333,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test auto with basePath 1`] = `
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
+    <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
     <!--__unplugin-inject-preload__-->
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -351,9 +351,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test customAttributes 1`] = `
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
+    <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
     <!--__unplugin-inject-preload__-->
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -369,9 +369,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test customAttributes with baseP
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
+    <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
     <!--__unplugin-inject-preload__-->
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" crossorigin="anonymous" data-font="Roboto"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -389,8 +389,8 @@ exports[`expect rspack with HtmlWebpackPlugin > test customPosition 1`] = `
     <title>Unplugin Inject Preload</title>
     <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
 
-    <link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
-    <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
 
   <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
@@ -410,8 +410,8 @@ exports[`expect rspack with HtmlWebpackPlugin > test customPosition with basePat
     <title>Unplugin Inject Preload</title>
     <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
 
-    <link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
-    <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
+    <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
 
   <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
@@ -429,9 +429,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test entryMatch 1`] = `
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+    <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
     <!--__unplugin-inject-preload__-->
-  <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"></head>
+  <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -447,9 +447,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test entryMatch with basePath 1`
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+    <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
     <!--__unplugin-inject-preload__-->
-  <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"></head>
+  <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -465,9 +465,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test injectBottom 1`] = `
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+    <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
     <!--__unplugin-inject-preload__-->
-  <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"></head>
+  <script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -483,9 +483,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test injectBottom with basePath 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font">
+    <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
     <!--__unplugin-inject-preload__-->
-  <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" type="font/woff2" as="font"></head>
+  <script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font"><link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -573,9 +573,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test noType 1`] = `
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" as="font"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
+    <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" as="font"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">
     <!--__unplugin-inject-preload__-->
-  <link rel="preload" href="/Roboto-Regular-04f7d441a486cbfae2fc.woff2" as="font"><link rel="preload" href="/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" as="font"><link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" as="font"><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
@@ -591,9 +591,9 @@ exports[`expect rspack with HtmlWebpackPlugin > test noType with basePath 1`] = 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
-    <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
+    <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">
     <!--__unplugin-inject-preload__-->
-  <link rel="preload" href="/base/Roboto-Regular-04f7d441a486cbfae2fc.woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-6cd0a997de9c4ae621ff.woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" as="font"><link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" as="font"><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
     
