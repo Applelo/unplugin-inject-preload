@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         page: resolve(__dirname, 'page.html'),
+        nested: resolve(__dirname, 'nested/index.html'),
+        'sub-nested': resolve(__dirname, 'nested/sub-nested/index.html'),
       },
     },
   },

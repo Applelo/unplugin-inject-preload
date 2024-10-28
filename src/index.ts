@@ -38,11 +38,14 @@ const unpluginFactory: UnpluginFactory<Options> = options => ({
         if (!bundle)
           return html
 
+        const depth = ctx.path.split('/').length - 2
+        const relativePath = depth > 0 ? '../'.repeat(depth) : ''
+
         return viteAdapter({
           bundle,
           html,
           options,
-          viteBasePath,
+          viteBasePath: `${depth > 0 && viteBasePath === './' ? '' : viteBasePath}${relativePath}`,
           viteLogger,
         })
       },
