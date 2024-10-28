@@ -10,7 +10,7 @@ exports[`expect rspack with HtmlRspackPlugin > test auto 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -28,7 +28,7 @@ exports[`expect rspack with HtmlRspackPlugin > test auto with basePath 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -46,7 +46,7 @@ exports[`expect rspack with HtmlRspackPlugin > test customAttributes 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -64,7 +64,7 @@ exports[`expect rspack with HtmlRspackPlugin > test customAttributes with basePa
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -82,7 +82,7 @@ exports[`expect rspack with HtmlRspackPlugin > test customPosition 1`] = `
     <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
     <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
 
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -100,7 +100,7 @@ exports[`expect rspack with HtmlRspackPlugin > test customPosition with basePath
     <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
     <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font" data-vite-plugin-inject-preload>
 
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -115,7 +115,7 @@ exports[`expect rspack with HtmlRspackPlugin > test entryMatch 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
   <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
@@ -132,7 +132,7 @@ exports[`expect rspack with HtmlRspackPlugin > test entryMatch with basePath 1`]
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
   <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
@@ -149,7 +149,7 @@ exports[`expect rspack with HtmlRspackPlugin > test injectBottom 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet">  <link rel="preload" href="/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
   <link rel="preload" href="/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
@@ -166,7 +166,7 @@ exports[`expect rspack with HtmlRspackPlugin > test injectBottom with basePath 1
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet">  <link rel="preload" href="/base/Roboto-Italic-96e486355f319e0b182b.woff2" type="font/woff2" as="font">
   <link rel="preload" href="/base/Roboto-Regular-ec5068bd8823a38af494.woff2" type="font/woff2" as="font">
 </head>
   <body>
@@ -183,7 +183,7 @@ exports[`expect rspack with HtmlRspackPlugin > test modulepreload 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -198,7 +198,7 @@ exports[`expect rspack with HtmlRspackPlugin > test modulepreload with basePath 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -213,7 +213,7 @@ exports[`expect rspack with HtmlRspackPlugin > test noMatch 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -228,7 +228,7 @@ exports[`expect rspack with HtmlRspackPlugin > test noMatch with basePath 1`] = 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -246,7 +246,7 @@ exports[`expect rspack with HtmlRspackPlugin > test noType 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -264,7 +264,7 @@ exports[`expect rspack with HtmlRspackPlugin > test noType with basePath 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -282,7 +282,7 @@ exports[`expect rspack with HtmlRspackPlugin > test wrongAttributes 1`] = `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/main.js"></script><link href="/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   
@@ -300,7 +300,7 @@ exports[`expect rspack with HtmlRspackPlugin > test wrongAttributes with basePat
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--__unplugin-inject-preload__-->
-  <title>Unplugin Inject Preload</title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
+  <title></title><script defer src="/base/main.js"></script><link href="/base/main.css" rel="stylesheet"></head>
   <body>
     <h1>Unplugin Inject Preload</h1>
   

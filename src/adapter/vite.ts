@@ -1,7 +1,7 @@
-import type { HtmlTagDescriptor, Logger } from 'vite'
 import type { OutputBundle } from 'rollup'
-import { getAssetsForViteJS } from '../helper/getAssets'
+import type { HtmlTagDescriptor, Logger } from 'vite'
 import type { Options } from '../types'
+import { getAssetsForViteJS } from '../helper/getAssets'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
 import { injectToCustom } from '../helper/html'
 

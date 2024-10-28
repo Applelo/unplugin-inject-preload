@@ -1,7 +1,7 @@
-import path from 'node:path'
 import type { HtmlTagDescriptor } from 'vite'
-import { lookup as mimeLookup } from 'mime-types'
 import type { AssetsSet, Options, UnpluginLogger } from '../types'
+import path from 'node:path'
+import { lookup as mimeLookup } from 'mime-types'
 import { getAsWithMime } from './getAsWithMime'
 
 export function getTagsAttributes(
@@ -10,7 +10,7 @@ export function getTagsAttributes(
   basePath: string,
   log: UnpluginLogger,
 ) {
-  const tagsAttributes = []
+  const tagsAttributes: HtmlTagDescriptor['attrs'][] = []
   const assets = Array.from(assetsSet)
 
   for (let i = 0; i < assets.length; i++) {

@@ -1,6 +1,6 @@
 const path = require('node:path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
 
 module.exports = {

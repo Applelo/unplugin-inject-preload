@@ -1,11 +1,11 @@
-import { join } from 'node:path'
-import { readFileSync } from 'node:fs'
-import { describe, expect, it } from 'vitest'
 import type { Configuration } from '@rspack/core'
+import type { Options } from './../src/types'
+import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { HtmlRspackPlugin, rspack } from '@rspack/core'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import { describe, expect, it } from 'vitest'
 import UnpluginInjectPreload from './../src/rspack'
-import type { Options } from './../src/types'
 import configs from './fixtures/configs'
 
 async function buildRspack(pluginConfig: Options, plugin: 'HtmlWebpackPlugin' | 'HtmlRspackPlugin' | 'none', config: Configuration = {}) {

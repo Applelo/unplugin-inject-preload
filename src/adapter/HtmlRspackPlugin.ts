@@ -1,7 +1,7 @@
 import type { Compiler } from '@rspack/core/dist/Compiler'
-import pkgWebpackSources from 'webpack-sources'
 import type { HtmlTagDescriptor } from 'vite'
 import type { Options } from '../types'
+import pkgWebpackSources from 'webpack-sources'
 import { getAssetsForWebpackOrRspack } from '../helper/getAssets'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
 import { injectToCustom, injectToHead } from '../helper/html'

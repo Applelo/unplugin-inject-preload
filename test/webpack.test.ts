@@ -1,12 +1,12 @@
-import { join } from 'node:path'
-import { readFileSync } from 'node:fs'
-import { describe, expect, it } from 'vitest'
 import type { Configuration } from 'webpack'
-import webpack from 'webpack'
+import type { Options } from './../src/types'
+import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { describe, expect, it } from 'vitest'
+import webpack from 'webpack'
 import UnpluginInjectPreload from './../src/webpack'
-import type { Options } from './../src/types'
 import configs from './fixtures/configs'
 
 async function buildWebpack(pluginConfig: Options, plugin = true, config: Configuration = {}) {

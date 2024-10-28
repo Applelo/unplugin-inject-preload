@@ -1,6 +1,6 @@
+import type { Compilation as RspackCompilation, Compiler as RspackCompiler } from '@rspack/core'
 import type { HtmlTagDescriptor, Logger } from 'vite'
 import type { Compilation as WebpackCompilation, Compiler as WebpackCompiler } from 'webpack'
-import type { Compilation as RspackCompilation, Compiler as RspackCompiler } from '@rspack/core'
 
 export interface OptionsFiles {
   /**

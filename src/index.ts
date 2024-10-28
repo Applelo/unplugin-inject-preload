@@ -4,9 +4,9 @@
  */
 
 import type { UnpluginFactory, UnpluginInstance } from 'unplugin'
-import { createUnplugin } from 'unplugin'
 import type { IndexHtmlTransformContext, Logger } from 'vite'
 import type { Options } from './types'
+import { createUnplugin } from 'unplugin'
 import { htmlRspackPluginAdapter } from './adapter/HtmlRspackPlugin'
 import { htmlWebpackPluginAdapter } from './adapter/HtmlWebpackPlugin'
 import { viteAdapter } from './adapter/vite'
