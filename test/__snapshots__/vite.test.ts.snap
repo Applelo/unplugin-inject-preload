@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`expect vitejs > test auto 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -18,17 +18,23 @@ exports[`expect vitejs > test auto 1`] = `
     />
     <link
       rel="preload"
-      href="/assets/lazy-BMgJfzmm.js"
+      href="/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -38,7 +44,7 @@ exports[`expect vitejs > test auto 1`] = `
 `;
 
 exports[`expect vitejs > test auto with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -55,9 +61,15 @@ exports[`expect vitejs > test auto with URL basePath  1`] = `
     />
     <link
       rel="preload"
-      href="https://github.com/assets/lazy-BMgJfzmm.js"
+      href="https://github.com/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="https://github.com/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
 
     <meta charset="UTF-8" />
@@ -67,12 +79,12 @@ exports[`expect vitejs > test auto with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
   </head>
   <body>
@@ -83,7 +95,7 @@ exports[`expect vitejs > test auto with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test auto with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -100,9 +112,15 @@ exports[`expect vitejs > test auto with basePath 1`] = `
     />
     <link
       rel="preload"
-      href="/base/assets/lazy-BMgJfzmm.js"
+      href="/base/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="/base/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
 
     <meta charset="UTF-8" />
@@ -112,9 +130,9 @@ exports[`expect vitejs > test auto with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -124,7 +142,7 @@ exports[`expect vitejs > test auto with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test auto with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -141,17 +159,23 @@ exports[`expect vitejs > test auto with relative basePath  1`] = `
     />
     <link
       rel="preload"
-      href="./assets/lazy-BMgJfzmm.js"
+      href="./assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="./assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -161,7 +185,7 @@ exports[`expect vitejs > test auto with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -185,8 +209,8 @@ exports[`expect vitejs > test customAttributes 1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -196,7 +220,7 @@ exports[`expect vitejs > test customAttributes 1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -223,12 +247,12 @@ exports[`expect vitejs > test customAttributes with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
   </head>
   <body>
@@ -239,7 +263,7 @@ exports[`expect vitejs > test customAttributes with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -266,9 +290,9 @@ exports[`expect vitejs > test customAttributes with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -278,7 +302,7 @@ exports[`expect vitejs > test customAttributes with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -302,8 +326,8 @@ exports[`expect vitejs > test customAttributes with relative basePath  1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -313,7 +337,7 @@ exports[`expect vitejs > test customAttributes with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customPosition 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -336,13 +360,19 @@ exports[`expect vitejs > test customPosition 1`] = `
     />
     <link
       rel="preload"
-      href="/assets/lazy-BMgJfzmm.js"
+      href="/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
     />
+    <link
+      rel="preload"
+      href="/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
+    />
 
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -352,7 +382,7 @@ exports[`expect vitejs > test customPosition 1`] = `
 `;
 
 exports[`expect vitejs > test customPosition with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -375,20 +405,26 @@ exports[`expect vitejs > test customPosition with URL basePath  1`] = `
     />
     <link
       rel="preload"
-      href="https://github.com/assets/lazy-BMgJfzmm.js"
+      href="https://github.com/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="https://github.com/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
 
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
   </head>
   <body>
@@ -399,7 +435,7 @@ exports[`expect vitejs > test customPosition with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customPosition with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -422,17 +458,23 @@ exports[`expect vitejs > test customPosition with basePath 1`] = `
     />
     <link
       rel="preload"
-      href="/base/assets/lazy-BMgJfzmm.js"
+      href="/base/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="/base/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
 
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -442,7 +484,7 @@ exports[`expect vitejs > test customPosition with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test customPosition with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -465,13 +507,19 @@ exports[`expect vitejs > test customPosition with relative basePath  1`] = `
     />
     <link
       rel="preload"
-      href="./assets/lazy-BMgJfzmm.js"
+      href="./assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
     />
+    <link
+      rel="preload"
+      href="./assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
+    />
 
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -481,15 +529,15 @@ exports[`expect vitejs > test customPosition with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
     <link
       rel="preload"
       href="/assets/Roboto-Italic-C4aLNNPR.woff2"
@@ -511,7 +559,7 @@ exports[`expect vitejs > test entryMatch 1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -521,12 +569,12 @@ exports[`expect vitejs > test entryMatch with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
     <link
       rel="preload"
@@ -549,7 +597,7 @@ exports[`expect vitejs > test entryMatch with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -559,9 +607,9 @@ exports[`expect vitejs > test entryMatch with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
     <link
       rel="preload"
       href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
@@ -583,15 +631,15 @@ exports[`expect vitejs > test entryMatch with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
     <link
       rel="preload"
       href="./assets/Roboto-Italic-C4aLNNPR.woff2"
@@ -613,15 +661,15 @@ exports[`expect vitejs > test entryMatch with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
     <link
       rel="preload"
       href="/assets/Roboto-Italic-C4aLNNPR.woff2"
@@ -636,9 +684,15 @@ exports[`expect vitejs > test injectBottom 1`] = `
     />
     <link
       rel="preload"
-      href="/assets/lazy-BMgJfzmm.js"
+      href="/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
   </head>
   <body>
@@ -649,7 +703,7 @@ exports[`expect vitejs > test injectBottom 1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -659,12 +713,12 @@ exports[`expect vitejs > test injectBottom with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
     <link
       rel="preload"
@@ -680,9 +734,15 @@ exports[`expect vitejs > test injectBottom with URL basePath  1`] = `
     />
     <link
       rel="preload"
-      href="https://github.com/assets/lazy-BMgJfzmm.js"
+      href="https://github.com/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="https://github.com/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
   </head>
   <body>
@@ -693,7 +753,7 @@ exports[`expect vitejs > test injectBottom with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -703,9 +763,9 @@ exports[`expect vitejs > test injectBottom with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
     <link
       rel="preload"
       href="/base/assets/Roboto-Italic-C4aLNNPR.woff2"
@@ -720,9 +780,15 @@ exports[`expect vitejs > test injectBottom with basePath 1`] = `
     />
     <link
       rel="preload"
-      href="/base/assets/lazy-BMgJfzmm.js"
+      href="/base/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="/base/assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
   </head>
   <body>
@@ -733,15 +799,15 @@ exports[`expect vitejs > test injectBottom with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
     <link
       rel="preload"
       href="./assets/Roboto-Italic-C4aLNNPR.woff2"
@@ -756,9 +822,15 @@ exports[`expect vitejs > test injectBottom with relative basePath  1`] = `
     />
     <link
       rel="preload"
-      href="./assets/lazy-BMgJfzmm.js"
+      href="./assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
+    />
+    <link
+      rel="preload"
+      href="./assets/lazy-dSX34uAD.css"
+      type="text/css"
+      as="style"
     />
   </head>
   <body>
@@ -769,12 +841,12 @@ exports[`expect vitejs > test injectBottom with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
       rel="modulepreload"
-      href="/assets/lazy-BMgJfzmm.js"
+      href="/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
     />
@@ -783,8 +855,8 @@ exports[`expect vitejs > test modulepreload 1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -794,12 +866,12 @@ exports[`expect vitejs > test modulepreload 1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
       rel="modulepreload"
-      href="https://github.com/assets/lazy-BMgJfzmm.js"
+      href="https://github.com/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
     />
@@ -811,12 +883,12 @@ exports[`expect vitejs > test modulepreload with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
   </head>
   <body>
@@ -827,12 +899,12 @@ exports[`expect vitejs > test modulepreload with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
       rel="modulepreload"
-      href="/base/assets/lazy-BMgJfzmm.js"
+      href="/base/assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
     />
@@ -844,9 +916,9 @@ exports[`expect vitejs > test modulepreload with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -856,12 +928,12 @@ exports[`expect vitejs > test modulepreload with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
       rel="modulepreload"
-      href="./assets/lazy-BMgJfzmm.js"
+      href="./assets/lazy-cU9JDMt6.js"
       type="application/javascript"
       as="script"
     />
@@ -870,8 +942,8 @@ exports[`expect vitejs > test modulepreload with relative basePath  1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -881,15 +953,15 @@ exports[`expect vitejs > test modulepreload with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noMatch 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -899,7 +971,7 @@ exports[`expect vitejs > test noMatch 1`] = `
 `;
 
 exports[`expect vitejs > test noMatch with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -909,12 +981,12 @@ exports[`expect vitejs > test noMatch with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
   </head>
   <body>
@@ -925,7 +997,7 @@ exports[`expect vitejs > test noMatch with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noMatch with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -935,9 +1007,9 @@ exports[`expect vitejs > test noMatch with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -947,15 +1019,15 @@ exports[`expect vitejs > test noMatch with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test noMatch with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -965,7 +1037,7 @@ exports[`expect vitejs > test noMatch with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noType 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="/assets/Roboto-Italic-C4aLNNPR.woff2" as="font" />
@@ -979,8 +1051,8 @@ exports[`expect vitejs > test noType 1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -990,7 +1062,7 @@ exports[`expect vitejs > test noType 1`] = `
 `;
 
 exports[`expect vitejs > test noType with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -1011,12 +1083,12 @@ exports[`expect vitejs > test noType with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
   </head>
   <body>
@@ -1027,7 +1099,7 @@ exports[`expect vitejs > test noType with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noType with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -1048,9 +1120,9 @@ exports[`expect vitejs > test noType with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -1060,7 +1132,7 @@ exports[`expect vitejs > test noType with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test noType with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -1078,8 +1150,8 @@ exports[`expect vitejs > test noType with relative basePath  1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -1089,7 +1161,7 @@ exports[`expect vitejs > test noType with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
@@ -1099,8 +1171,8 @@ exports[`expect vitejs > test wrongAttributes 1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="/assets/index-CzcbDykB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BkR2O4Mb.css" />
+    <script type="module" crossorigin src="/assets/index-54q__B5J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiFIiA68.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -1110,7 +1182,7 @@ exports[`expect vitejs > test wrongAttributes 1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
@@ -1123,12 +1195,12 @@ exports[`expect vitejs > test wrongAttributes with URL basePath  1`] = `
     <script
       type="module"
       crossorigin
-      src="https://github.com/assets/index-BbFzkfQn.js"
+      src="https://github.com/assets/index-DE8BS7y4.js"
     ></script>
     <link
       rel="stylesheet"
       crossorigin
-      href="https://github.com/assets/index-BbFMA-sv.css"
+      href="https://github.com/assets/index-Cr2shV7f.css"
     />
   </head>
   <body>
@@ -1139,7 +1211,7 @@ exports[`expect vitejs > test wrongAttributes with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
@@ -1152,9 +1224,9 @@ exports[`expect vitejs > test wrongAttributes with basePath 1`] = `
     <script
       type="module"
       crossorigin
-      src="/base/assets/index-8ZFwsIIF.js"
+      src="/base/assets/index-BG-dUhdX.js"
     ></script>
-    <link rel="stylesheet" crossorigin href="/base/assets/index-BFryvKQb.css" />
+    <link rel="stylesheet" crossorigin href="/base/assets/index-Cldl4F7h.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>
@@ -1164,7 +1236,7 @@ exports[`expect vitejs > test wrongAttributes with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
@@ -1174,8 +1246,8 @@ exports[`expect vitejs > test wrongAttributes with relative basePath  1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unplugin Inject Preload</title>
     <!--__unplugin-inject-preload__-->
-    <script type="module" crossorigin src="./assets/index-DGhqNQ8j.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BRW1DM8Y.css" />
+    <script type="module" crossorigin src="./assets/index-CWlkEjfg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwI6T9-l.css" />
   </head>
   <body>
     <h1>Unplugin Inject Preload</h1>

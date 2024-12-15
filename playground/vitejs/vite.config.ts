@@ -1,8 +1,8 @@
 import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
-
 // import Inspect from 'vite-plugin-inspect'
 import UnpluginInjectPreload from 'unplugin-inject-preload/vite'
+
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         page: resolve(__dirname, 'page.html'),
+        nested: resolve(__dirname, 'nested/index.html'),
+        subNested: resolve(__dirname, 'nested/sub-nested/index.html'),
       },
     },
   },

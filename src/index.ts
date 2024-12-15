@@ -4,9 +4,9 @@
  */
 
 import type { UnpluginFactory, UnpluginInstance } from 'unplugin'
-import { createUnplugin } from 'unplugin'
 import type { IndexHtmlTransformContext, Logger } from 'vite'
 import type { Options } from './types'
+import { createUnplugin } from 'unplugin'
 import { htmlRspackPluginAdapter } from './adapter/HtmlRspackPlugin'
 import { htmlWebpackPluginAdapter } from './adapter/HtmlWebpackPlugin'
 import { viteAdapter } from './adapter/vite'
@@ -38,11 +38,14 @@ const unpluginFactory: UnpluginFactory<Options> = options => ({
         if (!bundle)
           return html
 
+        const depth = ctx.path.split('/').length - 2
+        const relativePath = depth > 0 ? '../'.repeat(depth) : ''
+
         return viteAdapter({
           bundle,
           html,
           options,
-          viteBasePath,
+          viteBasePath: `${depth > 0 && viteBasePath === './' ? '' : viteBasePath}${relativePath}`,
           viteLogger,
         })
       },

@@ -1,10 +1,10 @@
-import type { Compilation } from 'webpack'
 import type { HtmlTagDescriptor } from 'vite'
-import { getHtmlWebpackPlugin } from '../helper/getHtmlWebpackPlugin'
+import type { Compilation } from 'webpack'
 import type { Options, UnpluginCompiler } from '../types'
+import { getAssetsForWebpackOrRspack } from '../helper/getAssets'
+import { getHtmlWebpackPlugin } from '../helper/getHtmlWebpackPlugin'
 import { getTagsAttributes } from '../helper/getTagsAttributes'
 import { injectToCustom } from '../helper/html'
-import { getAssetsForWebpackOrRspack } from '../helper/getAssets'
 
 export function htmlWebpackPluginAdapter(args: {
   name: string
