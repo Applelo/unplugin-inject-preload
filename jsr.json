@@ -1,6 +1,6 @@
 {
   "name": "@applelo/unplugin-inject-preload",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "exports": {
     ".": "./src/index.ts",
     "./vite": "./src/vite.ts",

@@ -1,8 +1,8 @@
 {
   "name": "unplugin-inject-preload",
   "type": "module",
-  "version": "3.0.1",
-  "packageManager": "pnpm@9.12.3",
+  "version": "4.0.0",
+  "packageManager": "pnpm@9.15.0",
   "description": "Inject <link rel='preload'> for Webpack/ViteJS",
   "license": "MIT",
   "homepage": "https://github.com/applelo/unplugin-inject-preload#readme",
@@ -67,7 +67,7 @@
     "dist"
   ],
   "engines": {
-    "node": "^14.18.0 || >=16.0.0"
+    "node": "^18.0.0 || >=20.0.0"
   },
   "scripts": {
     "build": "tsup",
@@ -89,28 +89,28 @@
   },
   "dependencies": {
     "mime-types": "^2.1.35",
-    "unplugin": "^1.15.0",
+    "unplugin": "^2.1.0",
     "webpack-sources": "^3.2.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "3.8.0",
-    "@rspack/core": "^1.0.14",
+    "@antfu/eslint-config": "3.12.0",
+    "@rspack/core": "^1.1.6",
     "@types/mime-types": "^2.1.4",
-    "@types/node": "^22.8.1",
+    "@types/node": "^22.10.2",
     "@types/webpack-sources": "^3.2.3",
-    "@vitest/coverage-v8": "^2.1.4",
+    "@vitest/coverage-v8": "^2.1.8",
     "css-loader": "^7.1.2",
     "esno": "^4.8.0",
     "fast-glob": "^3.3.2",
     "html-webpack-plugin": "^5.6.3",
-    "mini-css-extract-plugin": "^2.9.1",
-    "prettier": "^3.3.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "prettier": "^3.4.2",
     "ts-loader": "^9.5.1",
     "tsup": "^8.3.5",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10",
-    "vitest": "^2.1.4",
-    "webpack": "^5.95.0"
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8",
+    "webpack": "^5.97.1"
   }
 }

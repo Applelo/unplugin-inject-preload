@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`expect vitejs > test auto 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -44,7 +44,7 @@ exports[`expect vitejs > test auto 1`] = `
 `;
 
 exports[`expect vitejs > test auto with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -95,7 +95,7 @@ exports[`expect vitejs > test auto with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test auto with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -142,7 +142,7 @@ exports[`expect vitejs > test auto with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test auto with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -185,7 +185,7 @@ exports[`expect vitejs > test auto with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -220,7 +220,7 @@ exports[`expect vitejs > test customAttributes 1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -263,7 +263,7 @@ exports[`expect vitejs > test customAttributes with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -302,7 +302,7 @@ exports[`expect vitejs > test customAttributes with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test customAttributes with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -337,7 +337,7 @@ exports[`expect vitejs > test customAttributes with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customPosition 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -382,7 +382,7 @@ exports[`expect vitejs > test customPosition 1`] = `
 `;
 
 exports[`expect vitejs > test customPosition with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -435,7 +435,7 @@ exports[`expect vitejs > test customPosition with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test customPosition with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -484,7 +484,7 @@ exports[`expect vitejs > test customPosition with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test customPosition with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -529,7 +529,7 @@ exports[`expect vitejs > test customPosition with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -559,7 +559,7 @@ exports[`expect vitejs > test entryMatch 1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -597,7 +597,7 @@ exports[`expect vitejs > test entryMatch with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -631,7 +631,7 @@ exports[`expect vitejs > test entryMatch with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test entryMatch with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -661,7 +661,7 @@ exports[`expect vitejs > test entryMatch with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -703,7 +703,7 @@ exports[`expect vitejs > test injectBottom 1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -753,7 +753,7 @@ exports[`expect vitejs > test injectBottom with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -799,7 +799,7 @@ exports[`expect vitejs > test injectBottom with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test injectBottom with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -841,7 +841,7 @@ exports[`expect vitejs > test injectBottom with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -866,7 +866,7 @@ exports[`expect vitejs > test modulepreload 1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -899,7 +899,7 @@ exports[`expect vitejs > test modulepreload with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -928,7 +928,7 @@ exports[`expect vitejs > test modulepreload with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test modulepreload with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -953,7 +953,7 @@ exports[`expect vitejs > test modulepreload with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noMatch 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -971,7 +971,7 @@ exports[`expect vitejs > test noMatch 1`] = `
 `;
 
 exports[`expect vitejs > test noMatch with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -997,7 +997,7 @@ exports[`expect vitejs > test noMatch with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noMatch with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -1019,7 +1019,7 @@ exports[`expect vitejs > test noMatch with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test noMatch with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -1037,7 +1037,7 @@ exports[`expect vitejs > test noMatch with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noType 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="/assets/Roboto-Italic-C4aLNNPR.woff2" as="font" />
@@ -1062,7 +1062,7 @@ exports[`expect vitejs > test noType 1`] = `
 `;
 
 exports[`expect vitejs > test noType with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -1099,7 +1099,7 @@ exports[`expect vitejs > test noType with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test noType with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -1132,7 +1132,7 @@ exports[`expect vitejs > test noType with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test noType with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -1161,7 +1161,7 @@ exports[`expect vitejs > test noType with relative basePath  1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
@@ -1182,7 +1182,7 @@ exports[`expect vitejs > test wrongAttributes 1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes with URL basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
@@ -1211,7 +1211,7 @@ exports[`expect vitejs > test wrongAttributes with URL basePath  1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes with basePath 1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
@@ -1236,7 +1236,7 @@ exports[`expect vitejs > test wrongAttributes with basePath 1`] = `
 `;
 
 exports[`expect vitejs > test wrongAttributes with relative basePath  1`] = `
-"<!doctype html>
+"<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="preload" href="./yolo.woff2" type="font/woff2" as="font" />
